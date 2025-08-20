@@ -32,16 +32,13 @@ const {title, showNavBar=true, showFooter=true, dataLayout, seoData } = Astro.pr
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<header>
-
-		<RouterLinks  transition:persist client:only />
-	<!-- 	<TopMenuSuffle client:only/> -->
-	
-		
-	</header>
 	<body>	
 	<div id="top"></div>
 
+	<header>
+		<RouterLinks  transition:persist client:only />
+	<!-- 	<TopMenuSuffle client:only/> -->
+	</header>
 
 	<main>	
 		<!-- <RedesSocialesNav /> -->
