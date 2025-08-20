@@ -1,0 +1,18 @@
+.typingText {
+  display: inline-block;
+}
+
+.cursor {
+  color: #4a90e2;
+  animation: blink 1s infinite;
+  font-weight: normal;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}

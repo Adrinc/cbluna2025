@@ -1,0 +1,194 @@
+.holographicContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hologramElement {
+  position: absolute;
+  border: 2px solid #4a90e2;
+  box-shadow: 
+    0 0 20px rgba(74, 144, 226, 0.5),
+    inset 0 0 20px rgba(74, 144, 226, 0.1);
+  animation: hologramFloat linear infinite;
+  opacity: 0.3;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid transparent;
+  border-bottom-color: #4a90e2;
+  background: transparent;
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+}
+
+.square {
+  width: 35px;
+  height: 35px;
+}
+
+.diamond {
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+}
+
+.cornerInterface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.corner {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #4a90e2;
+  opacity: 0.4;
+}
+
+.topLeft {
+  top: 5%;
+  left: 5%;
+  border-right: none;
+  border-bottom: none;
+  animation: cornerPulse 3s ease-in-out infinite;
+}
+
+.topRight {
+  top: 5%;
+  right: 5%;
+  border-left: none;
+  border-bottom: none;
+  animation: cornerPulse 3s ease-in-out infinite 0.5s;
+}
+
+.bottomLeft {
+  bottom: 15%;
+  left: 5%;
+  border-right: none;
+  border-top: none;
+  animation: cornerPulse 3s ease-in-out infinite 1s;
+}
+
+.bottomRight {
+  bottom: 15%;
+  right: 5%;
+  border-left: none;
+  border-top: none;
+  animation: cornerPulse 3s ease-in-out infinite 1.5s;
+}
+
+.centerTarget {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+}
+
+.targetRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #4a90e2;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: targetExpand linear infinite;
+}
+
+.targetRing:nth-child(1) {
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+.targetRing:nth-child(2) {
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  animation-duration: 4s;
+  animation-delay: 1.3s;
+}
+
+.targetRing:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  animation-duration: 4s;
+  animation-delay: 2.6s;
+}
+
+@keyframes hologramFloat {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+  20% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2) rotate(360deg);
+  }
+}
+
+@keyframes cornerPulse {
+  0%, 100% {
+    opacity: 0.2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.6);
+  }
+}
+
+@keyframes targetExpand {
+  0% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+@media (max-width: 768px) {
+  .corner {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .centerTarget {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .hologramElement {
+    transform: scale(0.7);
+  }
+}

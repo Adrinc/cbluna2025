@@ -1,0 +1,75 @@
+.scanlinesContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.scanline {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4a90e2, transparent);
+  box-shadow: 0 0 10px #4a90e2, 0 0 20px #4a90e2;
+  animation: scanlineMove 8s linear infinite;
+}
+
+.scanline:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.scanline:nth-child(2) {
+  animation-delay: 2.7s;
+  background: linear-gradient(90deg, transparent, #375beb, transparent);
+  box-shadow: 0 0 10px #375beb, 0 0 20px #375beb;
+}
+
+.scanline:nth-child(3) {
+  animation-delay: 5.3s;
+  background: linear-gradient(90deg, transparent, #60bed7, transparent);
+  box-shadow: 0 0 10px #60bed7, 0 0 20px #60bed7;
+}
+
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(74, 144, 226, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 144, 226, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: gridPulse 4s ease-in-out infinite;
+}
+
+@keyframes scanlineMove {
+  0% {
+    top: -2px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes gridPulse {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
