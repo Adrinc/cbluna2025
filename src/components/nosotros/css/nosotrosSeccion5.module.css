@@ -1,111 +1,805 @@
-.sections {
+/* NosotrosSeccion5 - Final CTA Section */
+.ctaSection {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 65vh;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 40%, #16213e 70%, #0f0f23 100%);
+  color: white;
   overflow: hidden;
-  }
-  .gradientBackgroundTop {
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ctaSection.visible {
+  opacity: 1;
+}
+
+/* Container */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  z-index: 3;
+  text-align: center;
+}
+
+/* Background Effects */
+.backgroundEffects {
   position: absolute;
   top: 0;
-  width: 100vw;
-  height: 7vh;
-  background: linear-gradient(to bottom, #375beb4a -100%, transparent 100%);
-  z-index: 1;
-  }
-
-.gradientBackgroundBottom {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  height: 7vh;
-  background: linear-gradient(to top, #375beb4a -100%, transparent 100%);
-  z-index: 1;
-  }
-  .rivecomp {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  left: 0;
   width: 100%;
   height: 100%;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cosmicField {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 212, 255, 0.15) 0%, transparent 70%),
+    radial-gradient(circle at 75% 75%, rgba(255, 0, 110, 0.15) 0%, transparent 70%),
+    radial-gradient(circle at 50% 50%, rgba(131, 56, 236, 0.1) 0%, transparent 80%);
+  animation: cosmicDrift 25s ease-in-out infinite;
+}
+
+.energyWaves {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(255, 190, 11, 0.06) 49%, rgba(255, 190, 11, 0.06) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(0, 212, 255, 0.06) 49%, rgba(0, 212, 255, 0.06) 51%, transparent 52%);
+  background-size: 150px 150px, 130px 130px;
+  animation: energyFlow 20s linear infinite;
+}
+
+.digitalMatrix {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: matrixShift 30s linear infinite;
+}
+
+.holographicGrid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, transparent 98%, rgba(0, 255, 255, 0.03) 100%),
+    linear-gradient(0deg, transparent 98%, rgba(0, 255, 255, 0.03) 100%);
+  background-size: 100px 100px;
+  animation: hologramSweep 5s ease-in-out infinite;
+}
+
+/* Particle System */
+.particleSystem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   z-index: 2;
-  }
-  
-  .boton {
-position: absolute;
-top: 50%;
-left: 80%;
-transform: translate(-50%, -50%);
-z-index: 2;
-}
-.esfera {
-position: absolute;
-top: 50%;
-left: 82%; /* Mueve la esfera a la derecha */
-transform: translate(-50%, -50%);
-
-width: 1000px;
-height: 1000px;
-/* gradiente de color 375BEB a transparente radial centrado */
-background: radial-gradient(circle at center, #375beb4a 10%, #141414 30%, transparent 100%);
-z-index: -1;
 }
 
-.web {
-display: block;
-
+.particle {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background: var(--color);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: particleFloat 15s linear infinite;
+  animation-delay: var(--delay);
+  left: var(--x);
+  top: var(--y);
+  box-shadow: 0 0 20px var(--color);
 }
 
-.movil {
-display: none;
-
+.particle.active {
+  opacity: 1;
+  animation: particlePulse 2s ease-in-out infinite;
+  box-shadow: 0 0 40px var(--color);
 }
 
-@media (max-width: 900px) {
-section {
-cursor: default;
-height: 1080px;
-}
-.esfera {
-position: absolute;
-top: 85%;
-left: 50%; /* Mueve la esfera a la derecha */
-transform: translate(-50%, -50%);
-
-width: 650px;
-height: 650px;
-/* gradiente de color 375BEB a transparente radial centrado */
-background: radial-gradient(circle at center, #375beb4a 10%, #141414 30%, transparent 100%);
-z-index: -1;
-}
-.web {
-display: none;
-}
-.movil {
-display: block;
-}
+/* Orbital System */
+.orbitalSystem {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  z-index: 1;
 }
 
-/* Animación de entrada fade-in y de abajo hacia arriba */
-@keyframes fadeInUp {
+.centralCore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coreGlow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.3), rgba(255, 0, 110, 0.2), transparent);
+  border-radius: 50%;
+  animation: coreGlowPulse 3s ease-in-out infinite;
+}
+
+.coreSymbol {
+  position: relative;
+  font-size: 2rem;
+  z-index: 2;
+  animation: coreRotation 10s linear infinite;
+}
+
+.orbitRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--size);
+  height: var(--size);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbitRotation var(--duration) linear infinite;
+  animation-delay: var(--delay);
+}
+
+.orbitParticle {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(45deg, #00d4ff, #ff006e);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+}
+
+/* Section Header */
+.sectionHeader {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sectionHeader.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.headerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 0, 110, 0.1));
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(15px);
+  margin-bottom: 2rem;
+}
+
+.badgeIcon {
+  font-size: 1.5rem;
+  animation: badgeIconSpin 3s ease-in-out infinite;
+}
+
+.badgeText {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00d4ff;
+}
+
+/* Main Content */
+.mainContent {
+  margin-bottom: 5rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.mainContent.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ctaTitle {
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.titleLine1 {
+  color: #ffffff;
+}
+
+.titleHighlight {
+  background: linear-gradient(45deg, #00d4ff, #ff006e, #8338ec);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titleGradientShift 4s ease-in-out infinite;
+}
+
+.ctaDescription {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #b0b0b0;
+  margin: 0 0 3rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Feature Points */
+.featurePoints {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.featurePoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(26, 26, 46, 0.4));
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: featurePointEntrance 1s forwards;
+  animation-delay: var(--delay);
+}
+
+.featurePoint:hover {
+  border-color: rgba(0, 212, 255, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  animation: featureIconFloat 3s ease-in-out infinite;
+}
+
+.featureContent {
+  text-align: left;
+}
+
+.featureTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.featureDesc {
+  font-size: 1rem;
+  color: #b0b0b0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Statistics */
+.statsContainer {
+  margin: 4rem 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.statsContainer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.statCard {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(26, 26, 46, 0.5));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: statCardEntrance 0.8s forwards;
+  animation-delay: var(--delay);
+}
+
+.statCard:hover {
+  border-color: var(--color);
+  transform: translateY(-10px) scale(1.05);
+}
+
+.statValue {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color);
+  margin-bottom: 0.5rem;
+  animation: statValueCount 2s ease-out;
+}
+
+.statLabel {
+  font-size: 1rem;
+  color: #b0b0b0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.statGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--color), transparent);
+  opacity: 0.1;
+  animation: statGlowPulse 3s ease-in-out infinite;
+}
+
+/* CTA Button Section */
+.ctaButtonSection {
+  margin: 5rem 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ctaButtonSection.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ctaButton {
+  position: relative;
+  background: linear-gradient(135deg, #00d4ff, #ff006e);
+  border: none;
+  border-radius: 60px;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.ctaButton:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.4);
+}
+
+.buttonInner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.buttonText {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.buttonIcon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .buttonIcon {
+  transform: translateX(5px);
+}
+
+.buttonGlow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00d4ff, #ff006e, #8338ec, #ffbe0b);
+  border-radius: 60px;
+  opacity: 0;
+  z-index: -1;
+  animation: buttonGlowRotation 3s linear infinite;
+}
+
+.ctaButton:hover .buttonGlow {
+  opacity: 0.8;
+}
+
+.buttonRipple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+}
+
+.ctaButton:active .buttonRipple {
+  width: 300px;
+  height: 300px;
+}
+
+.buttonParticles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ctaButton:hover .buttonParticles {
+  opacity: 1;
+}
+
+.buttonParticle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translateX(-50%) rotate(var(--rotation)) translateY(-60px);
+  animation: buttonParticleOrbit 2s linear infinite;
+}
+
+.ctaSubtext {
+  font-size: 1rem;
+  color: #8a8a8a;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact Info Cards */
+.contactInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.contactCard {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(26, 26, 46, 0.3));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: contactCardEntrance 0.8s forwards;
+  animation-delay: var(--delay);
+}
+
+.contactCard:hover {
+  border-color: rgba(0, 212, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: cardIconBounce 2s ease-in-out infinite;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+/* Tech Symbols */
+.techSymbols {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.techSymbol {
+  position: absolute;
+  font-family: 'Monaco', monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(0, 212, 255, 0.15);
+  animation: techSymbolFloat 25s linear infinite;
+  animation-delay: var(--delay);
+  left: var(--x);
+  top: var(--y);
+}
+
+/* Bottom Transition */
+.bottomTransition {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9));
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes cosmicDrift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(20px, -30px) rotate(120deg); }
+  66% { transform: translate(-25px, 15px) rotate(240deg); }
+}
+
+@keyframes energyFlow {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(150px, 150px); }
+}
+
+@keyframes matrixShift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(60px, 60px); }
+}
+
+@keyframes hologramSweep {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes particleFloat {
   0% {
+    transform: translateY(100vh) translateX(0);
     opacity: 0;
-    transform: translateY(60px);
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
   }
   100% {
+    transform: translateY(-100px) translateX(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes particlePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+}
+
+@keyframes coreGlowPulse {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes coreRotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbitRotation {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes badgeIconSpin {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+}
+
+@keyframes titleGradientShift {
+  0%, 100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(45deg); }
+}
+
+@keyframes featurePointEntrance {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.fadeInUp {
-  opacity: 1 !important;
-  animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+@keyframes featureIconFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes statCardEntrance {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes statValueCount {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes statGlowPulse {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes buttonGlowRotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes buttonParticleOrbit {
+  from { transform: translateX(-50%) rotate(var(--rotation)) translateY(-60px); }
+  to { transform: translateX(-50%) rotate(calc(var(--rotation) + 360deg)) translateY(-60px); }
+}
+
+@keyframes contactCardEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardIconBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes techSymbolFloat {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.15;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(-100px) translateX(50px);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ctaSection {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .ctaTitle {
+    font-size: 2.5rem;
+  }
+  
+  .ctaDescription {
+    font-size: 1.1rem;
+  }
+  
+  .featurePoints {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .featurePoint {
+    padding: 1.5rem;
+  }
+  
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .ctaButton {
+    padding: 1.2rem 2.5rem;
+    font-size: 1rem;
+  }
+  
+  .contactInfo {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .orbitalSystem {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctaTitle {
+    font-size: 2rem;
+  }
+  
+  .featurePoint {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .featureContent {
+    text-align: center;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .statCard {
+    padding: 1.5rem;
+  }
+  
+  .orbitalSystem {
+    display: none;
+  }
 }

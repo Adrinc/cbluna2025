@@ -1,5 +1,6 @@
 ---
 import LayoutBasic from '../layouts/LayoutBasic.astro';
+import NosotrosSeccion1 from '../components/nosotros/Secciones/NosotrosSeccion1.jsx';
 import NosotrosSeccion2 from '../components/nosotros/Secciones/NosotrosSeccion2.jsx';
 import NosotrosSeccion3 from '../components/nosotros/Secciones/NosotrosSeccion3.jsx';
 import NosotrosSeccion4 from '../components/nosotros/Secciones/NosotrosSeccion4.jsx';
@@ -7,6 +8,7 @@ import NosotrosSeccion5 from '../components/nosotros/Secciones/NosotrosSeccion5.
 ---
 
 <LayoutBasic title="nosotros" showFooter={true}>
+  <NosotrosSeccion1 transition:persist client:only />
   <NosotrosSeccion2 transition:persist client:only />
   <NosotrosSeccion3 transition:persist client:only />
   <NosotrosSeccion4 transition:persist client:only />
