@@ -244,7 +244,7 @@
     rgba(96, 190, 215, 0.2) 50%,
     rgba(55, 91, 235, 0.3) 100%
   );
-  backdrop-filter: blur(2px);
+/*   backdrop-filter: blur(2px); */
   transition: backdrop-filter 0.4s ease;
 }
 
@@ -291,7 +291,7 @@
   justify-content: center;
   font-size: 0.8rem;
   color: #4a90e2;
-  backdrop-filter: blur(10px);
+/*   backdrop-filter: blur(10px); */
 }
 
 .cardContent {
@@ -302,7 +302,7 @@
   padding: 2rem;
   background: linear-gradient(
     to top,
-    rgba(10, 10, 20, 0.95) 0%,
+    rgba(10, 10, 20, 0.95) 50%,
     rgba(10, 10, 20, 0.8) 70%,
     transparent 100%
   );

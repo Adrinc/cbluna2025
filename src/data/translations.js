@@ -331,7 +331,51 @@ export const translations = {
     },
     contactoSeccion: {
       title: "¡Hablemos!",
-      description: "Nos encantaría conocerte y descubrir cómo podemos impulsar tu negocio juntos."
+      description: "Nos encantaría conocerte y descubrir cómo podemos impulsar tu negocio juntos.",
+      trustIndicators: [
+        { title: 'Seguro', subtitle: 'Cifrado SSL' },
+        { title: 'Rápido', subtitle: 'Respuesta 24h' },
+        { title: 'Preciso', subtitle: 'Soluciones Personalizadas' },
+        { title: 'Global', subtitle: 'Servicio Mundial' }
+      ],
+      contactMethods: [
+        {
+          title: 'Email',
+          value: 'info@cbluna.com',
+          description: 'Envíanos un mensaje cuando quieras'
+        },
+        {
+          title: 'Teléfono',
+          value: '+1 (555) 123-4567',
+          description: 'Llámanos durante horario laboral'
+        },
+        {
+          title: 'Chat en Vivo',
+          value: 'Disponible Ahora',
+          description: 'Soporte y consultoría instantánea'
+        },
+        {
+          title: 'Oficina',
+          value: 'México y USA',
+          description: 'Visita nuestras ubicaciones'
+        }
+      ],
+      connectTitle: "Múltiples Formas de Conectar",
+      systemStatus: {
+        title: "Estado del Sistema",
+        responseTime: "Tiempo de Respuesta",
+        responseValue: "< 2h",
+        availability: "Disponibilidad",
+        availabilityValue: "99.9%",
+        security: "Seguridad",
+        securityValue: "SSL+"
+      },
+      cta: {
+        title: "¿Listo para Empezar?",
+        subtitle: "Únete a cientos de empresas exitosas que confían en CBLUNA",
+        scheduleCall: "Agenda una Llamada",
+        viewPortfolio: "Ver Portafolio"
+      }
     }
   },
   en: {
