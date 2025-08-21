@@ -5,7 +5,7 @@ import TopMenu from '../components/react_components/TopMenu.jsx';
 import RouterLinks from '../components/react_components/RouterLinks.jsx';
 import TopMenuSuffle from '../components/header/TopMenuSuffle.astro';
 
-import FootUWIFI from '../components/global/FootUWIFI.astro';
+import FootUWIFI from '../components/global/FootUWIFI.jsx';
 import { ViewTransitions } from 'astro:transitions';
 
 
@@ -48,8 +48,8 @@ const {title, showNavBar=true, showFooter=true, dataLayout, seoData } = Astro.pr
 
 	</body>
 	
-<!-- 	{showFooter && <FootUWIFI  transition:persist client:only />} -->
-	{showFooter && <FootUWIFI />}
+	{showFooter && <FootUWIFI  transition:persist client:only />}
+<!-- 	{showFooter && <FootUWIFI  />} -->
 </html>
 
 <!-- <script>

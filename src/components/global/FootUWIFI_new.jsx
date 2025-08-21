@@ -51,14 +51,15 @@ const FootUWIFI = () => {
           <div className={styles.companyInfo}>
             <div className={styles.logoSection}>
               <img src="/favicon.png" alt="CBLUNA Logo" className={styles.logo} />
-            </div>
-            <div className={styles.companyText}>
-              <p className={styles.companyDescription}>
-                {ingles ? 
-                  "CBLUNA.com is the corporate website of a technology consultancy focused on digital transformation and development of custom solutions (software, web, mobile, marketing and management systems), serving companies in sectors such as telecommunications, finance, industry and marketing." :
-                  "CBLUNA.com es la web corporativa de una consultora/empresa de tecnología enfocada en transformación digital y desarrollo de soluciones personalizadas (software, web, móvil, marketing y sistemas de gestión), dirigida a empresas de sectores como telecomunicaciones, finanzas, industria y marketing."
-                }
-              </p>
+              <div className={styles.companyText}>
+                <h3 className={styles.companyName}>CBLUNA</h3>
+                <p className={styles.companyDescription}>
+                  {ingles ? 
+                    "CBLUNA is the leading solution in MDf/JDF infrastructure management, providing total control and real-time visibility of your network assets." :
+                    "CBLUNA es la solución líder en gestión de infraestructura MDf/JDF, proporcionando control total y visibilidad en tiempo real de tus activos de red."
+                  }
+                </p>
+              </div>
             </div>
           </div>
 

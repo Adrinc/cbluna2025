@@ -74,6 +74,24 @@ const projectsData = [
     imagen: '/image/carrusel_proyectos/recursos_humanos.png',
     category: 'ai',
     technologies: ['👥', '🧠', '📈']
+  },
+  { 
+    key: 'nethive', 
+    imagen: '/image/carrusel_proyectos/Nethive.png',
+    category: 'web',
+    technologies: ['🌐', '📡', '⚡']
+  },
+  { 
+    key: 'uwifi', 
+    imagen: '/image/carrusel_proyectos/uwifi.png',
+    category: 'iot',
+    technologies: ['📶', '5G', '🔗']
+  },
+  { 
+    key: 'ojociudadano', 
+    imagen: '/image/carrusel_proyectos/ojociudadano.png',
+    category: 'ai',
+    technologies: ['👁️', '🤖', '📱']
   }
 ];
 

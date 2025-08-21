@@ -201,6 +201,18 @@ export const translations = {
       recursos_humanos: {
         titulo: "Recursos Humanos",
         subtitulo: "Automatiza y centraliza la gestión del personal."
+      },
+      nethive: {
+        titulo: "NetHive NEO",
+        subtitulo: "Gestión integral de infraestructura de telecomunicaciones."
+      },
+      uwifi: {
+        titulo: "U-wifi",
+        subtitulo: "Internet 5G portable, gratis con anuncios o plan económico."
+      },
+      ojociudadano: {
+        titulo: "Ojo Ciudadano",
+        subtitulo: "Plataforma IA para reportar incidentes urbanos inteligentemente."
       }
     },
     stats: {
@@ -579,6 +591,18 @@ export const translations = {
       recursos_humanos: {
         titulo: "Human Resources",
         subtitulo: "Automate and centralize personnel management."
+      },
+      nethive: {
+        titulo: "NetHive NEO",
+        subtitulo: "Comprehensive telecommunications infrastructure management."
+      },
+      uwifi: {
+        titulo: "U-wifi",
+        subtitulo: "Portable 5G internet, free with ads or affordable plan."
+      },
+      ojociudadano: {
+        titulo: "Citizen Eye",
+        subtitulo: "AI platform for intelligently reporting urban incidents."
       }
     },
     stats: {
