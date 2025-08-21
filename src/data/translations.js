@@ -3,6 +3,144 @@ export const translations = {
     solutionsTitle: "Explora nuestras soluciones",
     solutionsSubtitle: "innovadoras y personalizadas",
 
+    // Nueva sección de soluciones tecnológicas
+    solutions: {
+      sectionTitle: "Soluciones",
+      sectionSubtitle: "Tecnológicas Avanzadas",
+      sectionDescription: "Transformamos ideas en realidad con soluciones tecnológicas de vanguardia",
+      
+      webDevelopment: {
+        title: "DESARROLLO WEB",
+        subtitle: "Soluciones web de última generación",
+        features: [
+          "Desarrollo Front y Back End",
+          "Sitios web de alto rendimiento y funcionalidad",
+          "Diseños atractivos y modernos",
+          "SEO para mejorar tu visibilidad en buscadores"
+        ],
+        infoCards: [
+          {
+            title: "Progressive Web Apps",
+            description: "Aplicaciones web que funcionan como apps nativas, con acceso offline y notificaciones push.",
+            metric: "95%",
+            metricLabel: "Performance Score"
+          },
+          {
+            title: "API REST & GraphQL",
+            description: "Integración perfecta con servicios externos y bases de datos para máxima eficiencia.",
+            metric: "< 200ms",
+            metricLabel: "Response Time"
+          },
+          {
+            title: "Cloud Hosting",
+            description: "Despliegue en la nube con escalabilidad automática y alta disponibilidad.",
+            metric: "99.9%",
+            metricLabel: "Uptime"
+          }
+        ]
+      },
+      
+      mobileDevelopment: {
+        title: "DESARROLLO MÓVIL",
+        subtitle: "Apps innovadoras multiplataforma",
+        features: [
+          "Apps nativas y multiplataforma",
+          "Soluciones rápidas y funcionales",
+          "Diseño intuitivo para una mejor experiencia",
+          "Integración con servicios y herramientas actuales"
+        ],
+        infoCards: [
+          {
+            title: "React Native & Flutter",
+            description: "Desarrollo multiplataforma con código compartido para iOS y Android.",
+            metric: "70%",
+            metricLabel: "Code Sharing"
+          },
+          {
+            title: "App Store Optimization",
+            description: "Optimización para tiendas de aplicaciones y mejores rankings de búsqueda.",
+            metric: "4.8/5",
+            metricLabel: "User Rating"
+          },
+          {
+            title: "Push Notifications",
+            description: "Sistema avanzado de notificaciones para mayor engagement del usuario.",
+            metric: "85%",
+            metricLabel: "Open Rate"
+          }
+        ]
+      },
+      
+      digitalMarketing: {
+        title: "MARKETING DIGITAL",
+        subtitle: "Estrategias digitales efectivas",
+        features: [
+          "Estrategias SEO y publicidad efectiva",
+          "Gestión y crecimiento en redes sociales",
+          "Contenido creativo para atraer clientes",
+          "Análisis para optimizar resultados"
+        ],
+        infoCards: [
+          {
+            title: "SEO Optimization",
+            description: "Posicionamiento orgánico en buscadores con técnicas avanzadas de SEO.",
+            metric: "+300%",
+            metricLabel: "Traffic Growth"
+          },
+          {
+            title: "Social Media ROI",
+            description: "Gestión integral de redes sociales con métricas de retorno de inversión.",
+            metric: "450%",
+            metricLabel: "ROI Average"
+          },
+          {
+            title: "Content Strategy",
+            description: "Creación de contenido viral y estrategias de engagement personalizadas.",
+            metric: "12M+",
+            metricLabel: "Reach Monthly"
+          }
+        ]
+      },
+      
+      consulting: {
+        title: "CONSULTORÍA DE SOFTWARE",
+        subtitle: "Proyectos de integración empresarial",
+        features: [
+          "Gestión centralizada de clientes y ventas",
+          "Reportes para decisiones inteligentes",
+          "Personalización según tus necesidades",
+          "Optimización de procesos empresariales"
+        ],
+        
+        subSolutions: {
+          crm: {
+            title: "CRM",
+            description: "Centraliza la gestión de tus clientes en un solo lugar, permite hacer seguimiento a contactos y optimizar tus ventas al ofrecer un servicio personalizado."
+          },
+          erp: {
+            title: "ERP",
+            description: "Te ayuda a gestionar todas las áreas clave de tu empresa (finanzas, recursos humanos, inventarios, producción) en una sola plataforma integrada, mejorando la eficiencia operativa."
+          },
+          finances: {
+            title: "Finanzas",
+            description: "Simplifica el control financiero de tu negocio, permitiéndote gestionar presupuestos, ingresos y gastos para mantener una visión clara y optimizar tu rentabilidad."
+          },
+          accessControl: {
+            title: "Control de acceso",
+            description: "Protege tus instalaciones o sistemas con una herramienta que administra quién puede ingresar y cuándo, garantizando seguridad y trazabilidad."
+          },
+          warehouse: {
+            title: "Almacenes",
+            description: "Optimiza la gestión de inventarios y logística para que sepas siempre qué productos tienes disponibles, reduciendo errores y agilizando el despacho."
+          },
+          cms: {
+            title: "Administrador de contenido",
+            description: "Permite crear, organizar y publicar contenido en tu sitio web o app fácilmente, manteniendo actualizado lo que ven tus usuarios."
+          }
+        }
+      }
+    },
+
 
     projectsTitle: "Nuestros proyectos",
     projectsSubtitle: "Un poco de nuestro trabajo",
@@ -199,6 +337,144 @@ export const translations = {
   en: {
     solutionsTitle: "Explore our solutions",
     solutionsSubtitle: "innovative and personalized",
+
+    // New technological solutions section
+    solutions: {
+      sectionTitle: "Solutions",
+      sectionSubtitle: "Advanced Technology",
+      sectionDescription: "We transform ideas into reality with cutting-edge technological solutions",
+      
+      webDevelopment: {
+        title: "WEB DEVELOPMENT",
+        subtitle: "Next-generation web solutions",
+        features: [
+          "Front and Back End Development",
+          "High performance and functional websites",
+          "Attractive and modern designs",
+          "SEO to improve your search engine visibility"
+        ],
+        infoCards: [
+          {
+            title: "Progressive Web Apps",
+            description: "Web applications that work like native apps, with offline access and push notifications.",
+            metric: "95%",
+            metricLabel: "Performance Score"
+          },
+          {
+            title: "API REST & GraphQL",
+            description: "Perfect integration with external services and databases for maximum efficiency.",
+            metric: "< 200ms",
+            metricLabel: "Response Time"
+          },
+          {
+            title: "Cloud Hosting",
+            description: "Cloud deployment with automatic scaling and high availability.",
+            metric: "99.9%",
+            metricLabel: "Uptime"
+          }
+        ]
+      },
+      
+      mobileDevelopment: {
+        title: "MOBILE DEVELOPMENT",
+        subtitle: "Innovative cross-platform apps",
+        features: [
+          "Native and cross-platform apps",
+          "Fast and functional solutions",
+          "Intuitive design for better experience",
+          "Integration with current services and tools"
+        ],
+        infoCards: [
+          {
+            title: "React Native & Flutter",
+            description: "Cross-platform development with shared code for iOS and Android.",
+            metric: "70%",
+            metricLabel: "Code Sharing"
+          },
+          {
+            title: "App Store Optimization",
+            description: "Optimization for app stores and better search rankings.",
+            metric: "4.8/5",
+            metricLabel: "User Rating"
+          },
+          {
+            title: "Push Notifications",
+            description: "Advanced notification system for greater user engagement.",
+            metric: "85%",
+            metricLabel: "Open Rate"
+          }
+        ]
+      },
+      
+      digitalMarketing: {
+        title: "DIGITAL MARKETING",
+        subtitle: "Effective digital strategies",
+        features: [
+          "Effective SEO strategies and advertising",
+          "Social media management and growth",
+          "Creative content to attract customers",
+          "Analytics to optimize results"
+        ],
+        infoCards: [
+          {
+            title: "SEO Optimization",
+            description: "Organic search engine positioning with advanced SEO techniques.",
+            metric: "+300%",
+            metricLabel: "Traffic Growth"
+          },
+          {
+            title: "Social Media ROI",
+            description: "Comprehensive social media management with return on investment metrics.",
+            metric: "450%",
+            metricLabel: "ROI Average"
+          },
+          {
+            title: "Content Strategy",
+            description: "Creation of viral content and personalized engagement strategies.",
+            metric: "12M+",
+            metricLabel: "Reach Monthly"
+          }
+        ]
+      },
+      
+      consulting: {
+        title: "SOFTWARE CONSULTING",
+        subtitle: "Enterprise integration projects",
+        features: [
+          "Centralized customer and sales management",
+          "Reports for intelligent decision making",
+          "Customization according to your needs",
+          "Business process optimization"
+        ],
+        
+        subSolutions: {
+          crm: {
+            title: "CRM",
+            description: "Centralize customer management in one place, track contacts and optimize your sales by offering personalized service."
+          },
+          erp: {
+            title: "ERP",
+            description: "Helps you manage all key areas of your business (finance, human resources, inventory, production) in a single integrated platform, improving operational efficiency."
+          },
+          finances: {
+            title: "Finance",
+            description: "Simplifies financial control of your business, allowing you to manage budgets, income and expenses to maintain a clear view and optimize your profitability."
+          },
+          accessControl: {
+            title: "Access Control",
+            description: "Protect your facilities or systems with a tool that manages who can enter and when, ensuring security and traceability."
+          },
+          warehouse: {
+            title: "Warehouse",
+            description: "Optimize inventory and logistics management so you always know what products you have available, reducing errors and streamlining dispatch."
+          },
+          cms: {
+            title: "Content Manager",
+            description: "Allows you to create, organize and publish content on your website or app easily, keeping what your users see updated."
+          }
+        }
+      }
+    },
 
     projectsTitle: "Our Projects",
     projectsSubtitle: "A glimpse of our work",

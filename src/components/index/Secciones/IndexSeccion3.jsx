@@ -141,12 +141,12 @@ const IndexSeccion3 = () => {
       </div>
 
       {/* Floating tech elements */}
-      <div className={styles.floatingElements}>
+{/*       <div className={styles.floatingElements}>
         <div className={styles.floatingIcon} style={{'--delay': '0s'}}>⚡</div>
         <div className={styles.floatingIcon} style={{'--delay': '1s'}}>🔮</div>
         <div className={styles.floatingIcon} style={{'--delay': '2s'}}>🚀</div>
         <div className={styles.floatingIcon} style={{'--delay': '3s'}}>💎</div>
-      </div>
+      </div> */}
     </section>
   );
 };
