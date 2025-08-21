@@ -1,0 +1,364 @@
+.statsContainer {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(20, 20, 30, 0.8) 0%, 
+    rgba(10, 15, 35, 0.9) 50%, 
+    rgba(15, 10, 25, 0.8) 100%);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+.statsContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(74, 144, 226, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(96, 190, 215, 0.1) 0%, transparent 50%);
+  z-index: -1;
+}
+
+.statsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+}
+
+.statsTitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4a90e2;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+.titleIcon {
+  font-size: 1.5rem;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+.liveIndicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4a90e2;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  background: #4a90e2;
+  border-radius: 50%;
+  animation: livePulse 1s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.8);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: statSlideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: var(--delay);
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(74, 144, 226, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.statIcon {
+  font-size: 2rem;
+  filter: drop-shadow(0 0 10px rgba(74, 144, 226, 0.5));
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color);
+  text-shadow: 0 0 20px var(--color);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.statGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, var(--glow-color) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.statCard:hover .statGlow {
+  opacity: 0.1;
+}
+
+.statWave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color, #4a90e2), transparent);
+  animation: waveMove 2s ease-in-out infinite;
+}
+
+.neuralMonitor {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 15px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.monitorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a90e2;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.signalStrength {
+  display: flex;
+  gap: 3px;
+  align-items: end;
+}
+
+.signalBar {
+  width: 4px;
+  background: #4a90e2;
+  border-radius: 2px;
+  animation: signalPulse 1s ease-in-out infinite;
+}
+
+.signalBar:nth-child(1) {
+  height: 8px;
+  animation-delay: 0s;
+}
+
+.signalBar:nth-child(2) {
+  height: 12px;
+  animation-delay: 0.1s;
+}
+
+.signalBar:nth-child(3) {
+  height: 16px;
+  animation-delay: 0.2s;
+}
+
+.signalBar:nth-child(4) {
+  height: 20px;
+  animation-delay: 0.3s;
+}
+
+.waveform {
+  display: flex;
+  align-items: end;
+  gap: 2px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.waveBar {
+  flex: 1;
+  background: linear-gradient(to top, #4a90e2, #60bed7);
+  border-radius: 1px;
+  animation: waveformPulse 2s ease-in-out infinite;
+  animation-delay: var(--delay);
+  min-height: 4px;
+}
+
+/* Animations */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes livePulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes statSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes signalPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scaleY(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes waveformPulse {
+  0%, 100% {
+    height: 20%;
+    background: linear-gradient(to top, #4a90e2, #60bed7);
+  }
+  25% {
+    height: 60%;
+    background: linear-gradient(to top, #60bed7, #375beb);
+  }
+  50% {
+    height: 100%;
+    background: linear-gradient(to top, #375beb, #4a90e2);
+  }
+  75% {
+    height: 40%;
+    background: linear-gradient(to top, #4a90e2, #60bed7);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .statsContainer {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .statCard {
+    padding: 1rem;
+  }
+
+  .statValue {
+    font-size: 2rem;
+  }
+
+  .statsHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .statsTitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsContainer {
+    padding: 1rem;
+  }
+
+  .statCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .statValue {
+    font-size: 1.8rem;
+  }
+
+  .neuralMonitor {
+    padding: 1rem;
+  }
+
+  .waveform {
+    height: 40px;
+  }
+}

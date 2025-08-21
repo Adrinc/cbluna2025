@@ -2,7 +2,6 @@ import { translations } from '../../../data/translations';
 import { isEnglish } from '../../../data/variables';
 import { useStore } from '@nanostores/react';
 import CardCarrusel from './CardCarrusel.jsx';
-import React from 'react';
 import styles from './ProyectosCarrusel.module.css';
 
 const proyectos = [
