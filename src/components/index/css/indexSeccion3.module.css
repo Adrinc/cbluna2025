@@ -10,8 +10,9 @@
   min-height: 100vh;
   padding: 4rem 0;
   overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  opacity: 0.1;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
   background: 
     linear-gradient(135deg, 
       rgba(15, 23, 42, 0.95) 0%, 
@@ -312,8 +313,8 @@
 
 @keyframes fadeInUp {
   0% {
-    opacity: 0;
-    transform: translateY(100px);
+    opacity: 0.1;
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
@@ -322,8 +323,9 @@
 }
 
 .fadeInUp {
-  opacity: 1;
-  animation: fadeInUp 2.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 /* Responsive Design */
@@ -341,6 +343,8 @@
   .sections {
     padding: 2rem 0;
     min-height: auto;
+    opacity: 0.2;
+    transform: translateY(30px);
   }
 
   .container {
@@ -367,6 +371,8 @@
 @media (max-width: 480px) {
   .sections {
     padding: 1rem 0;
+    opacity: 0.3;
+    transform: translateY(20px);
   }
 
   .container {
@@ -391,5 +397,9 @@
 
   .floatingIcon {
     display: none;
+  }
+  
+  .fadeInUp {
+    animation-duration: 1s;
   }
 }

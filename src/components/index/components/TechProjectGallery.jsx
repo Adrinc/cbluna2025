@@ -110,20 +110,39 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
   ];
 
   useEffect(() => {
+    const container = containerRef.current;
+    let hasAnimated = false;
+    if (!container) return;
+    
+    // Fallback para móviles: activar automáticamente después de un retraso
+    const fallbackTimer = setTimeout(() => {
+      if (!hasAnimated) {
+        setIsVisible(true);
+        hasAnimated = true;
+      }
+    }, 800);
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasAnimated) {
+          clearTimeout(fallbackTimer);
           setIsVisible(true);
+          hasAnimated = true;
+          observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { 
+        threshold: window.innerWidth <= 768 ? 0.05 : 0.3,
+        rootMargin: '100px 0px -50px 0px'
+      }
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    observer.observe(container);
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallbackTimer);
+    };
   }, []);
 
   const filteredProjects = selectedCategory === 'all' 

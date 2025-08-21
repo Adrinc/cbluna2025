@@ -104,18 +104,36 @@ const IndexSeccion3 = () => {
     const section = sectionRef.current;
     let hasAnimated = false;
     if (!section) return;
+    
+    // Fallback para móviles: activar automáticamente después de un retraso
+    const fallbackTimer = setTimeout(() => {
+      if (!hasAnimated && section) {
+        section.classList.add(styles.fadeInUp);
+        hasAnimated = true;
+      }
+    }, 1000);
+    
     const observer = new window.IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
+          clearTimeout(fallbackTimer);
           section.classList.add(styles.fadeInUp);
           hasAnimated = true;
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { 
+        threshold: window.innerWidth <= 768 ? 0.1 : 0.2,
+        rootMargin: '50px 0px -50px 0px'
+      }
     );
+    
     observer.observe(section);
-    return () => observer.disconnect();
+    
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallbackTimer);
+    };
   }, []);
 
   return (

@@ -12,8 +12,8 @@
     rgba(5, 15, 30, 0.98) 50%, 
     rgba(15, 10, 25, 0.95) 100%);
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(100px);
+  opacity: 0.1;
+  transform: translateY(50px);
   transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -609,6 +609,17 @@
   }
 }
 
+@keyframes mobileSlideIn {
+  0% {
+    opacity: 0.3;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ========================================
    RESPONSIVE DESIGN
 ======================================== */
@@ -622,6 +633,15 @@
 @media (max-width: 768px) {
   .galleryContainer {
     padding: 2rem 1rem;
+    opacity: 0.2;
+    transform: translateY(30px);
+    min-height: auto;
+  }
+
+  .galleryContainer.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .filterButtons {
@@ -657,6 +677,12 @@
 @media (max-width: 480px) {
   .galleryContainer {
     padding: 1.5rem 0.5rem;
+    opacity: 0.3;
+    transform: translateY(20px);
+  }
+
+  .galleryContainer.visible {
+    animation: mobileSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
   .projectCard {
