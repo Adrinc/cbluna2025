@@ -1,9 +1,8 @@
 import { useStore } from '@nanostores/react';
 import { isEnglish } from '../../../data/variables';
 import { translations } from '../../../data/translations';
-import RiveComponent from "../../global/animations/riveComponent";
-import SeccionTechCanvas from "../../Scene3D/technology/seccion_tech_main";
-import { useRef, useEffect } from 'react';
+import TechStackGrouped from '../components/TechStackGrouped.jsx';
+import { useRef, useEffect, useState } from 'react';
 import styles from '../css/indexSeccion6.module.css';
 
 const IndexSeccion6 = () => {
@@ -15,47 +14,77 @@ const IndexSeccion6 = () => {
     const section = sectionRef.current;
     let hasAnimated = false;
     if (!section) return;
+    
+    // Fallback para móviles: activar automáticamente después de un retraso
+    const fallbackTimer = setTimeout(() => {
+      if (!hasAnimated && section) {
+        section.classList.add(styles.fadeInUp);
+        hasAnimated = true;
+      }
+    }, 1000);
+    
     const observer = new window.IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
+          clearTimeout(fallbackTimer);
           section.classList.add(styles.fadeInUp);
           hasAnimated = true;
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { 
+        threshold: window.innerWidth <= 768 ? 0.1 : 0.2,
+        rootMargin: '50px 0px -50px 0px'
+      }
     );
+    
     observer.observe(section);
-    return () => observer.disconnect();
+    
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallbackTimer);
+    };
   }, []);
 
   return (
-    <>
-      <div className={styles.centeredText}>
-        <h1 className={`${styles.largeText} ${styles.whiteText}`}>
-          {t.techSection.title}
+    <section id="tech_stack" className={styles.section} ref={sectionRef}>
+      {/* Advanced background effects */}
+      <div className={styles.neuralNetwork} />
+      <div className={styles.particleField} />
+      <div className={styles.scanLines} />
+      <div className={styles.gradientBackgroundTop}></div>
+      <div className={styles.gradientBackgroundBottom}></div>
+
+      {/* Enhanced header section */}
+      <div className={styles.headerContainer}>
+        <div className={styles.headerBadge}>
+          <span className={styles.pulse} />
+          <span className={styles.badgeText}>TECH STACK 2025</span>
+        </div>
+        <h1 className={styles.title}>
+          <span className={styles.titleGlow}>{t.techSection.title}</span>
         </h1>
-        <h2 className={`${styles.largeText} ${styles.boldText} ${styles.gradientText}`}>
-          {t.techSection.subtitle}
+        <h2 className={styles.subtitle}>
+          <span className={styles.subtitleAccent}>{t.techSection.subtitle}</span>
         </h2>
+        <div className={styles.titleDivider} />
       </div>
-      <section id="tech_stack" className={styles.section} ref={sectionRef}>
-        <div className={styles.gradientBackgroundTop}></div>
-        <div className={styles.gradientBackgroundBottom}></div>
-        <div className={`${styles.rivecomp} ${styles.web}`}>
-          <SeccionTechCanvas />
-        </div>
-        <div className={`${styles.rivecomp} ${styles.movil}`}>
-          <RiveComponent
-            src="/rive/cbluna.riv"
-            artboard="technologies_mobile"
-            stateMachines="State Machine 1"
-            autoplay={true}
-            fit="fill"
-          />
-        </div>
-      </section>
-    </>
+
+      {/* Tech Stack Content */}
+      <div className={styles.techContainer}>
+        <TechStackGrouped useTooltip={true} />
+      </div>
+
+      {/* Floating tech elements */}
+      <div className={styles.floatingElements}>
+        <div className={styles.floatingIcon} style={{'--delay': '0s'}}>⚡</div>
+        <div className={styles.floatingIcon} style={{'--delay': '1s'}}>🔮</div>
+        <div className={styles.floatingIcon} style={{'--delay': '2s'}}>🚀</div>
+        <div className={styles.floatingIcon} style={{'--delay': '3s'}}>💎</div>
+        <div className={styles.floatingIcon} style={{'--delay': '4s'}}>🌐</div>
+        <div className={styles.floatingIcon} style={{'--delay': '5s'}}>⚛️</div>
+      </div>
+    </section>
   );
 };
 

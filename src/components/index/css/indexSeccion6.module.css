@@ -1,109 +1,407 @@
+/* ========================================
+   TECH SECTION - ADVANCED FUTURISTIC DESIGN
+======================================== */
+
 .section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.3s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4rem 0;
+  overflow: hidden;
+  opacity: 0.1;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background: 
+    linear-gradient(135deg, 
+      rgba(15, 23, 42, 0.95) 0%, 
+      rgba(30, 41, 59, 0.9) 50%, 
+      rgba(15, 23, 42, 0.95) 100%);
+}
+
+/* Neural Network Background */
+.neuralNetwork {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(74, 144, 226, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(96, 190, 215, 0.1) 0%, transparent 50%),
+    linear-gradient(0deg, transparent 24%, rgba(74, 144, 226, 0.05) 25%, rgba(74, 144, 226, 0.05) 26%, transparent 27%, transparent 74%, rgba(74, 144, 226, 0.05) 75%, rgba(74, 144, 226, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(74, 144, 226, 0.05) 25%, rgba(74, 144, 226, 0.05) 26%, transparent 27%, transparent 74%, rgba(74, 144, 226, 0.05) 75%, rgba(74, 144, 226, 0.05) 76%, transparent 77%, transparent);
+  background-size: 100px 100px, 80px 80px, 50px 50px, 50px 50px;
+  animation: neuralPulse 15s ease-in-out infinite;
+  z-index: -3;
+}
+
+.particleField {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(74, 144, 226, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(96, 190, 215, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(74, 144, 226, 0.4), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(96, 190, 215, 0.4), transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: particleFloat 20s linear infinite;
+  z-index: -2;
+}
+
+.scanLines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(74, 144, 226, 0.03) 50%,
+    transparent 100%
+  );
+  background-size: 200px 100%;
+  animation: scanMove 10s linear infinite;
+  z-index: -1;
+}
+
+.gradientBackgroundTop {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 15vh;
+  background: linear-gradient(to bottom, rgba(55, 91, 235, 0.3) -50%, transparent 100%);
+  z-index: 1;
+}
+
+.gradientBackgroundBottom {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 15vh;
+  background: linear-gradient(to top, rgba(55, 91, 235, 0.3) -50%, transparent 100%);
+  z-index: 1;
+}
+
+/* ========================================
+   HEADER SECTION
+======================================== */
+
+.headerContainer {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+  z-index: 10;
+}
+
+.headerBadge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 2rem;
+  background: rgba(74, 144, 226, 0.1);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 30px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  animation: badgeGlow 3s ease-in-out infinite;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: #4a90e2;
+  border-radius: 50%;
+  animation: pulseBeat 2s ease-in-out infinite;
+}
+
+.badgeText {
+  color: #4a90e2;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 1rem 0;
+  line-height: 1.1;
+  position: relative;
+}
+
+.titleGlow {
+  background: linear-gradient(135deg, #fff 0%, #4a90e2 50%, #60bed7 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleShimmer 4s ease-in-out infinite;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 2rem 0;
+  line-height: 1.4;
+}
+
+.subtitleAccent {
+  color: #60bed7;
+  font-style: italic;
+}
+
+.titleDivider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4a90e2, transparent);
+  margin: 0 auto;
+  animation: dividerPulse 3s ease-in-out infinite;
+}
+
+/* ========================================
+   TECH CONTAINER
+======================================== */
+
+.techContainer {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 5;
+  min-height: auto;
+}
+
+.desktopCanvas {
+  width: 100%;
+  height: 70vh;
+  min-height: 500px;
+}
+
+/* ========================================
+   FLOATING ELEMENTS
+======================================== */
+
+.floatingElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.floatingIcon {
+  position: absolute;
+  font-size: 2rem;
+  color: rgba(74, 144, 226, 0.6);
+  animation: floatAround 8s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+.floatingIcon:nth-child(1) { top: 10%; left: 10%; }
+.floatingIcon:nth-child(2) { top: 20%; right: 15%; }
+.floatingIcon:nth-child(3) { bottom: 30%; left: 20%; }
+.floatingIcon:nth-child(4) { bottom: 15%; right: 10%; }
+.floatingIcon:nth-child(5) { top: 60%; left: 5%; }
+.floatingIcon:nth-child(6) { top: 40%; right: 8%; }
+
+.fadeInUp {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes neuralPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-200px) translateY(-200px);
+  }
+}
+
+@keyframes scanMove {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes badgeGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(74, 144, 226, 0.6);
+  }
+}
+
+@keyframes pulseBeat {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes titleShimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes dividerPulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1.5);
+  }
+}
+
+@keyframes floatAround {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translateY(-30px) translateX(20px) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-10px) translateX(-15px) rotate(180deg);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateY(-40px) translateX(25px) rotate(270deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0.1;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 3.5rem;
   }
   
-  .gradientBackgroundTop {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 7vh;
-    background: linear-gradient(to bottom, #375beb4a -100%, transparent 100%);
-    z-index: 1;
+  .subtitle {
+    font-size: 1.3rem;
   }
-  
-  .gradientBackgroundBottom {
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    height: 7vh;
-    background: linear-gradient(to top, #375beb4a -100%, transparent 100%);
-    z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 2rem 0;
+    opacity: 0.2;
+    transform: translateY(30px);
   }
-  
-  .centeredText {
-    text-align: center;
-    margin: 8px;
+
+  .headerContainer {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
   }
-  
-  .largeText {
-    font-size: 5em;
+
+  .title {
+    font-size: 2.5rem;
   }
-  
-  .whiteText {
-    color: white;
+
+  .subtitle {
+    font-size: 1.1rem;
   }
-  
-  .boldText {
-    font-weight: bold;
+
+  .floatingIcon {
+    font-size: 1.5rem;
   }
-  
-  .gradientText {
-    font-size: 4em;
-    background: linear-gradient(to right, #B43BFF, #55D9FF);
-    -webkit-background-clip: text;
-    color: transparent;
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 1rem 0;
+    opacity: 0.3;
+    transform: translateY(20px);
   }
-  
-  .rivecomp {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+
+  .headerContainer {
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
   }
-  
-  .web {
-    display: block;
+
+  .title {
+    font-size: 2rem;
   }
-  
-  .movil {
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .headerBadge {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .badgeText {
+    font-size: 0.7rem;
+  }
+
+  .floatingIcon {
     display: none;
   }
   
-  @media (max-width: 768px) {
-    .section {
-      cursor: default;
-      height: 150px;
-    }
-    .largeText {
-      font-size: 2em;
-    }
-    .gradientText {
-      font-size: 1.5em;
-    }
-    .web {
-      display: none;
-    }
-    .movil {
-      display: block;
-    }
-  }
-  
-  /* Animación de entrada fade-in y de abajo hacia arriba */
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(60px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
   .fadeInUp {
-    opacity: 1;
-    animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation-duration: 1s;
   }
+}

@@ -1,0 +1,648 @@
+/* ========================================
+   TECH STACK GROUPED - ADVANCED CATEGORIZED UI
+======================================== */
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* ========================================
+   BACKGROUND EFFECTS
+======================================== */
+
+.backgroundEffects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.neuralNetwork {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(74, 144, 226, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(96, 190, 215, 0.08) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 24%, rgba(74, 144, 226, 0.02) 25%, rgba(74, 144, 226, 0.02) 26%, transparent 27%),
+    linear-gradient(-45deg, transparent 24%, rgba(96, 190, 215, 0.02) 25%, rgba(96, 190, 215, 0.02) 26%, transparent 27%);
+  background-size: 200px 200px, 150px 150px, 80px 80px, 80px 80px;
+  animation: neuralPulse 20s ease-in-out infinite;
+}
+
+.dataFlow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 100px,
+      rgba(74, 144, 226, 0.03) 102px,
+      rgba(74, 144, 226, 0.03) 104px
+    );
+  animation: dataStream 15s linear infinite;
+}
+
+.quantumField {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 40px 60px, rgba(74, 144, 226, 0.4), transparent),
+    radial-gradient(2px 2px at 120px 40px, rgba(96, 190, 215, 0.3), transparent),
+    radial-gradient(1px 1px at 200px 100px, rgba(74, 144, 226, 0.5), transparent);
+  background-size: 300px 300px;
+  background-repeat: repeat;
+  animation: quantumFloat 25s linear infinite;
+}
+
+/* ========================================
+   TECH GROUPS CONTAINER
+======================================== */
+
+.techGroups {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+  z-index: 10;
+}
+
+.techGroup {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: var(--delay);
+}
+
+.techGroup.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ========================================
+   GROUP HEADER
+======================================== */
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.groupIcon {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--group-color);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.groupIcon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  animation: iconShine 3s ease-in-out infinite;
+}
+
+.groupTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #fff 0%, var(--group-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.groupLine {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--group-color), transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.groupLine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: lineFlow 2s ease-in-out infinite;
+}
+
+.techCount {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--group-color);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--group-color);
+  backdrop-filter: blur(10px);
+  min-width: 50px;
+  text-align: center;
+}
+
+/* ========================================
+   TECHNOLOGIES GRID
+======================================== */
+
+.technologiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.techCard {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9) 0%, 
+    rgba(30, 41, 59, 0.8) 100%);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  animation: cardEntry 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: var(--tech-delay);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.techCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--tech-color);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(var(--tech-color-rgb, 74, 144, 226), 0.3);
+}
+
+.cardBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+    rgba(var(--tech-color-rgb, 74, 144, 226), 0.1) 0%, 
+    transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.techCard:hover .cardBackground {
+  opacity: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ========================================
+   TECH CARD CONTENT
+======================================== */
+
+.logoContainer {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.techLogo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.techCard:hover .techLogo {
+  transform: scale(1.1) rotateY(15deg);
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
+}
+
+.logoGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--tech-color) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.techCard:hover .logoGlow {
+  opacity: 0.3;
+  animation: logoGlowPulse 2s ease-in-out infinite;
+}
+
+.techInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.techName {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.8rem 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.techMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.techLevel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  background: rgba(74, 144, 226, 0.2);
+  color: #4a90e2;
+  border: 1px solid rgba(74, 144, 226, 0.3);
+}
+
+.techLevel[data-level="expert"] {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.techLevel[data-level="advanced"] {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.techLevel[data-level="intermediate"] {
+  background: rgba(249, 115, 22, 0.2);
+  color: #f97316;
+  border-color: rgba(249, 115, 22, 0.3);
+}
+
+.techExperience {
+  font-size: 0.85rem;
+  color: #60bed7;
+  font-weight: 500;
+}
+
+/* ========================================
+   HOVER EFFECTS
+======================================== */
+
+.hoverEffect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.05) 0%, 
+    transparent 50%, 
+    rgba(var(--tech-color-rgb, 74, 144, 226), 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+.techCard:hover .hoverEffect {
+  opacity: 1;
+}
+
+.sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.techCard:hover .sparkles {
+  opacity: 1;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--tech-color);
+  border-radius: 50%;
+  top: calc(20% + var(--i) * 10%);
+  left: calc(20% + var(--i) * 12%);
+  animation: sparkleFloat 2s ease-in-out infinite;
+  animation-delay: calc(var(--i) * 0.2s);
+  box-shadow: 0 0 10px var(--tech-color);
+}
+
+/* ========================================
+   FLOATING ELEMENTS
+======================================== */
+
+.floatingElements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingElement {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #4a90e2, transparent);
+  border-radius: 50%;
+  top: var(--y);
+  left: var(--x);
+  animation: elementFloat 8s ease-in-out infinite;
+  animation-delay: var(--delay);
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.6);
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes neuralPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes dataStream {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes quantumFloat {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(-300px) translateY(-300px);
+  }
+}
+
+@keyframes iconShine {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes lineFlow {
+  0%, 100% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+}
+
+@keyframes cardEntry {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes logoGlowPulse {
+  0%, 100% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+@keyframes sparkleFloat {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.2);
+  }
+}
+
+@keyframes elementFloat {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translateY(-20px) translateX(15px) rotate(120deg);
+    opacity: 0.8;
+  }
+  66% {
+    transform: translateY(-5px) translateX(-10px) rotate(240deg);
+    opacity: 0.5;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .technologiesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .groupTitle {
+    font-size: 1.7rem;
+  }
+  
+  .techCard {
+    padding: 1.2rem;
+  }
+  
+  .cardContent {
+    gap: 1.2rem;
+  }
+  
+  .techLogo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .techGroups {
+    gap: 3rem;
+  }
+  
+  .technologiesGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .groupHeader {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .groupIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+  
+  .groupTitle {
+    font-size: 1.5rem;
+  }
+  
+  .techCard {
+    padding: 1rem;
+  }
+  
+  .cardContent {
+    gap: 1rem;
+  }
+  
+  .techLogo {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .techName {
+    font-size: 1.2rem;
+  }
+  
+  .floatingElement {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.5rem;
+  }
+  
+  .techGroups {
+    gap: 2rem;
+  }
+  
+  .groupHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    text-align: left;
+  }
+  
+  .groupLine {
+    order: -1;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .groupTitle {
+    font-size: 1.3rem;
+  }
+  
+  .techCard {
+    padding: 0.8rem;
+  }
+  
+  .cardContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  
+  .techLogo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .techName {
+    font-size: 1.1rem;
+  }
+  
+  .techMeta {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}

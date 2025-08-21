@@ -1,0 +1,480 @@
+/* ========================================
+   TECH STACK MOBILE - FUTURISTIC UI
+======================================== */
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, 
+    rgba(10, 10, 20, 0.95) 0%, 
+    rgba(5, 15, 30, 0.98) 50%, 
+    rgba(15, 10, 25, 0.95) 100%);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   BACKGROUND EFFECTS
+======================================== */
+
+.backgroundMatrix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 1px;
+  z-index: -2;
+}
+
+.matrixDot {
+  background: rgba(74, 144, 226, 0.1);
+  border-radius: 50%;
+  animation: matrixPulse 3s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+/* ========================================
+   CATEGORY NAVIGATION
+======================================== */
+
+.categoryNav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  z-index: 10;
+  position: relative;
+}
+
+.categoryButton {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.categoryButton:hover {
+  background: rgba(74, 144, 226, 0.1);
+  border-color: rgba(74, 144, 226, 0.6);
+  transform: translateY(-2px);
+}
+
+.categoryButton.active {
+  background: rgba(74, 144, 226, 0.2);
+  border-color: rgba(74, 144, 226, 0.8);
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.4);
+}
+
+.categoryIcon {
+  font-size: 1.5rem;
+}
+
+.categoryLabel {
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ========================================
+   MAIN TECH DISPLAY
+======================================== */
+
+.techDisplay {
+  position: relative;
+  margin-bottom: 2rem;
+  z-index: 5;
+}
+
+.techCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  animation: cardSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.holographicBorder {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #4a90e2, #60bed7, #375beb, #4a90e2);
+  background-size: 400% 400%;
+  border-radius: 22px;
+  z-index: -1;
+  animation: borderFlow 3s ease-in-out infinite;
+}
+
+.logoContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.logoGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, var(--tech-color, #4a90e2) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+  animation: logoGlowPulse 2s ease-in-out infinite;
+}
+
+.techLogo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  position: relative;
+}
+
+.techInfo {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.techName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 10px rgba(74, 144, 226, 0.5);
+}
+
+.techMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.categoryBadge {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.8), rgba(96, 190, 215, 0.8));
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.indexIndicator {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.particleSystem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--color, #4a90e2);
+  border-radius: 50%;
+  opacity: 0;
+  animation: particleFloat 3s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+/* ========================================
+   PROGRESS INDICATORS
+======================================== */
+
+.progressIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.progressDot {
+  width: 8px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.progressDot.active {
+  background: #4a90e2;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.8);
+  transform: scale(1.2);
+}
+
+/* ========================================
+   TECH GRID PREVIEW
+======================================== */
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.miniCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.miniCard:hover,
+.miniCard.current {
+  background: rgba(74, 144, 226, 0.1);
+  border-color: rgba(74, 144, 226, 0.5);
+  transform: translateY(-2px);
+}
+
+.miniLogo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.miniName {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ========================================
+   DATA STREAMS
+======================================== */
+
+.dataStreams {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dataStream {
+  position: absolute;
+  top: 0;
+  left: calc(12.5% * var(--index));
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(74, 144, 226, 0.3), transparent);
+  animation: streamFlow 4s linear infinite;
+  animation-delay: calc(var(--index) * 0.5s);
+}
+
+.dataChunk {
+  position: absolute;
+  top: calc(var(--index) * 30%);
+  left: -20px;
+  width: 40px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.6rem;
+  color: rgba(74, 144, 226, 0.5);
+  text-align: center;
+  animation: chunkMove 3s linear infinite;
+  animation-delay: calc(var(--index) * 0.3s);
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes matrixPulse {
+  0%, 100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes cardSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes borderFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes logoGlowPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes streamFlow {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes chunkMove {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .categoryNav {
+    gap: 0.5rem;
+  }
+
+  .categoryButton {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .categoryIcon {
+    font-size: 1.2rem;
+  }
+
+  .categoryLabel {
+    font-size: 0.7rem;
+  }
+
+  .techCard {
+    padding: 1.5rem;
+  }
+
+  .techLogo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .techName {
+    font-size: 1.5rem;
+  }
+
+  .techGrid {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .miniLogo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .miniName {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .techGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .categoryLabel {
+    display: none;
+  }
+}

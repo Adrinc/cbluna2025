@@ -48,7 +48,7 @@ const NosotrosSeccion1 = () => {
       </video>
       
       {/* Efecto Matrix de fondo */}
-      <MatrixRain />
+   {/*    <MatrixRain /> */}
       
       {/* Overlay tecnológico */}
       <div className={styles.techOverlay}></div>
