@@ -366,13 +366,15 @@ const groupedTechnologies = {
   }
 };
 
-const TechStackGrouped = ({ useTooltip = false }) => {
+const TechStackGrouped = ({ useTooltip = true }) => {
   const ingles = useStore(isEnglish);
   const containerRef = useRef(null);
   const [selectedTech, setSelectedTech] = useState(null);
   const [clickPosition, setClickPosition] = useState(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
   const [visibleGroups, setVisibleGroups] = useState(new Set());
+
+  console.log('TechStackGrouped rendered, useTooltip:', useTooltip);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -402,14 +404,19 @@ const TechStackGrouped = ({ useTooltip = false }) => {
   }, []);
 
   const handleTechClick = (tech, event) => {
+    console.log('Tech clicked:', tech.name, 'useTooltip:', useTooltip);
+    
     if (useTooltip) {
       const rect = event.currentTarget.getBoundingClientRect();
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       
-      setTooltipPosition({
+      const newPosition = {
         x: rect.left + rect.width / 2,
         y: rect.top + scrollTop + rect.height + 10
-      });
+      };
+      
+      console.log('Tooltip position:', newPosition);
+      setTooltipPosition(newPosition);
     } else {
       setClickPosition({
         clientX: event.clientX,

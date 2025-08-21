@@ -19,25 +19,25 @@ const TechSolutions = () => {
       id: 'webDevelopment',
       icon: '🌐',
       gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
+      image: '/image/global/desarrollo_webs.jpg'
     },
     {
       id: 'mobileDevelopment',
       icon: '📱',
       gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop'
+      image: '/image/global/desarrollo_movil.jfif'
     },
     {
       id: 'digitalMarketing',
       icon: '📊',
       gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
+      image: '/image/global/marketing2.png'
     },
     {
       id: 'consulting',
       icon: '🔧',
       gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-      image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop'
+      image: '/image/global/consultoria.jfif'
     }
   ];
 
