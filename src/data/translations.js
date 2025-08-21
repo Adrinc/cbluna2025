@@ -203,7 +203,7 @@ export const translations = {
         subtitulo: "Automatiza y centraliza la gestión del personal."
       },
       nethive: {
-        titulo: "NetHive NEO",
+        titulo: "NetHive",
         subtitulo: "Gestión integral de infraestructura de telecomunicaciones."
       },
       uwifi: {
@@ -593,7 +593,7 @@ export const translations = {
         subtitulo: "Automate and centralize personnel management."
       },
       nethive: {
-        titulo: "NetHive NEO",
+        titulo: "NetHive",
         subtitulo: "Comprehensive telecommunications infrastructure management."
       },
       uwifi: {
