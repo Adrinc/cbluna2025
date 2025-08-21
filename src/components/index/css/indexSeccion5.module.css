@@ -1,202 +1,923 @@
-/* Animación de entrada fade-in y de abajo hacia arriba */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  100% {
+/* Advanced Stats Section - Performance Optimized */
+.section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.95) 0%, 
+    rgba(30, 41, 59, 0.9) 50%, 
+    rgba(15, 23, 42, 0.95) 100%);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Performance Optimized Background Layers */
+.backgroundLayers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.neuralNetwork {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(74, 144, 226, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(96, 190, 215, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 50% 20%, rgba(108, 92, 231, 0.1) 0%, transparent 40%);
+  animation: neuralPulse 25s ease-in-out infinite;
+}
+
+.dataStream {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(45deg, transparent 40%, rgba(74, 144, 226, 0.03) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(96, 190, 215, 0.02) 50%, transparent 60%);
+  background-size: 100px 100px;
+  animation: dataFlow 20s linear infinite;
+}
+
+.holographicGrid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(74, 144, 226, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 144, 226, 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: gridFloat 18s ease-in-out infinite;
+}
+
+.particleField {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 40px 50px, rgba(74, 144, 226, 0.4), transparent),
+    radial-gradient(1px 1px at 90px 80px, rgba(96, 190, 215, 0.3), transparent),
+    radial-gradient(3px 3px at 140px 30px, rgba(108, 92, 231, 0.3), transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: particleMove 30s linear infinite;
+}
+
+/* Floating Data Nodes */
+.dataNodes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.dataNode {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(74, 144, 226, 0.6);
+  border-radius: 50%;
+  top: var(--y);
+  left: var(--x);
+  animation: nodeFloat 6s ease-in-out infinite;
+  animation-delay: var(--delay);
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+}
+
+/* Connection Network */
+.connectionNetwork {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.connectionLine {
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.4), transparent);
+  animation: connectionPulse 8s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+.connectionLine:nth-child(1) { top: 15%; left: 10%; transform: rotate(25deg); }
+.connectionLine:nth-child(2) { top: 35%; right: 15%; transform: rotate(-45deg); }
+.connectionLine:nth-child(3) { top: 55%; left: 30%; transform: rotate(60deg); }
+.connectionLine:nth-child(4) { top: 75%; right: 20%; transform: rotate(-30deg); }
+.connectionLine:nth-child(5) { top: 25%; left: 60%; transform: rotate(-60deg); }
+.connectionLine:nth-child(6) { bottom: 25%; left: 20%; transform: rotate(45deg); }
+.connectionLine:nth-child(7) { bottom: 15%; right: 40%; transform: rotate(-15deg); }
+.connectionLine:nth-child(8) { top: 45%; right: 50%; transform: rotate(75deg); }
+
+/* Main Container */
+.container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  z-index: 5;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.headerBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 2rem;
+  background: rgba(74, 144, 226, 0.1);
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  animation: badgeGlow 4s ease-in-out infinite;
+}
+
+.badgeIcon {
+  font-size: 1.2rem;
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+.badgeText {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #4a90e2;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.mainTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+  color: white;
+}
+
+.titleAccent {
+  background: linear-gradient(135deg, #ffffff 0%, #4a90e2 50%, #60bed7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(74, 144, 226, 0.5);
+  animation: titleShimmer 4s ease-in-out infinite;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #4a90e2, #6c5ce7, #60bed7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease-in-out infinite;
+}
+
+.mainSubtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+}
+
+/* Stats Grid Layout */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+
+/* Left Side - Visual Dashboard */
+.statsLeft {
+  position: relative;
+}
+
+.dashboardContainer {
+  position: relative;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #4a90e2, #6c5ce7);
+  padding: 6px;
+  animation: containerGlow 5s ease-in-out infinite;
+}
+
+.statsImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.5s ease;
+}
+
+.imageContainer:hover .statsImage {
+  transform: scale(1.05);
+}
+
+.holographicFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background: linear-gradient(45deg, rgba(74, 144, 226, 0.4), rgba(96, 190, 215, 0.4)) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0.7;
+  animation: frameShimmer 3s ease-in-out infinite;
+}
+
+.scanLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.8), transparent);
+  animation: scanMove 4s ease-in-out infinite;
+}
+
+/* Experience Tag */
+.experienceTag {
+  position: absolute;
+  bottom: -15px;
+  left: -15px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #4a90e2, #6c5ce7);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  animation: tagFloat 3s ease-in-out infinite;
+}
+
+.tagIcon {
+  font-size: 1.5rem;
+  animation: iconSpin 4s linear infinite;
+}
+
+.tagContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.tagLabel {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.tagValue {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+
+/* Real-time Metrics Display */
+.metricsDisplay {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.currentMetric {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.metricIcon {
+  font-size: 2rem;
+  filter: drop-shadow(0 0 10px rgba(74, 144, 226, 0.5));
+  animation: metricPulse 2s ease-in-out infinite;
+}
+
+.metricInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4a90e2;
+  text-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.metricLabel {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Tech Stats Mini Cards */
+.techStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.techStat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(74, 144, 226, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: statSlideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: var(--delay);
+}
+
+.techStat:hover {
+  transform: translateY(-2px);
+  border-color: rgba(74, 144, 226, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.techIcon {
+  font-size: 1.2rem;
+}
+
+.techData {
+  display: flex;
+  flex-direction: column;
+}
+
+.techValue {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #4a90e2;
+  line-height: 1;
+  margin-bottom: 0.2rem;
+}
+
+.techLabel {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Right Side - Progress Analytics */
+.statsRight {
+  position: relative;
+}
+
+.progressSection {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: 25px;
+  padding: 2rem;
+  backdrop-filter: blur(20px);
+  margin-bottom: 2rem;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.progressHeader h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.progressIndicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.pulsingDot {
+  width: 8px;
+  height: 8px;
+  background: #4a90e2;
+  border-radius: 50%;
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+/* Enhanced Progress Bars */
+.progressBars {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.progressItem {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: progressSlideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: calc(var(--index) * 0.2s);
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.progressLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progressIcon {
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 10px rgba(74, 144, 226, 0.5));
+}
+
+.progressTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.progressPercentage {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+
+.percentValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4a90e2;
+  text-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+}
+
+.percentSymbol {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Advanced Progress Bar */
+.progressBarContainer {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.progressBar {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.progressFilled {
+  height: 100%;
+  width: 0%;
+  background: var(--gradient);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.1s ease;
+}
+
+.progressFilled.animated {
+  animation: progressFill 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: var(--delay);
+}
+
+.progressGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: progressGlow 3s ease-in-out infinite;
+}
+
+.progressTracker {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: rgba(74, 144, 226, 0.2);
+  border: 2px solid #4a90e2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trackerDot {
+  width: 6px;
+  height: 6px;
+  background: #4a90e2;
+  border-radius: 50%;
+  animation: trackerPulse 2s ease-in-out infinite;
+}
+
+/* Metric Visualization */
+.metricVisualization {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.visualizationBars {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 40px;
+  gap: 0.5rem;
+}
+
+.visualBar {
+  width: 8px;
+  height: var(--height);
+  background: linear-gradient(to top, rgba(74, 144, 226, 0.3), rgba(74, 144, 226, 0.8));
+  border-radius: 4px;
+  animation: barGrow 1.5s ease-out forwards;
+  animation-delay: var(--delay);
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+/* Performance Insights */
+.performanceInsights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.insightCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.insightCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(74, 144, 226, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.insightIcon {
+  font-size: 2rem;
+  filter: drop-shadow(0 0 10px rgba(74, 144, 226, 0.5));
+}
+
+.insightContent h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.insightContent p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Achievement Section */
+.achievementSection {
+  margin-top: 3rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(74, 144, 226, 0.1);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+}
+
+.achievementGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.achievement {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.achievement:hover {
+  transform: translateY(-10px);
+  border-color: rgba(74, 144, 226, 0.5);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.achievementNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4a90e2;
+  text-shadow: 0 0 20px rgba(74, 144, 226, 0.5);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  animation: numberCount 2s ease-out;
+}
+
+.achievementLabel {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes neuralPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+@keyframes dataFlow {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+@keyframes gridFloat {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -20px); }
+}
+
+@keyframes particleMove {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-100vh) translateX(100px); }
+}
+
+@keyframes nodeFloat {
+  0%, 100% { transform: translate(0, 0); opacity: 0.4; }
+  50% { transform: translate(20px, -20px); opacity: 1; }
+}
+
+@keyframes connectionPulse {
+  0%, 100% { opacity: 0; transform: scaleX(0); }
+  50% { opacity: 0.6; transform: scaleX(1); }
+}
+
+@keyframes badgeGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(74, 144, 226, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(74, 144, 226, 0.6); }
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes titleShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes containerGlow {
+  0%, 100% { box-shadow: 0 0 30px rgba(74, 144, 226, 0.2); }
+  50% { box-shadow: 0 0 60px rgba(74, 144, 226, 0.4); }
+}
+
+@keyframes frameShimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes scanMove {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes tagFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes iconSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes metricPulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(74, 144, 226, 0.5)); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 20px rgba(74, 144, 226, 0.8)); }
+}
+
+@keyframes statSlideIn {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.fadeInUp {
-  opacity: 1;
-  animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.3); }
 }
 
-.sectionss {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: auto;
-    opacity: 0;
-    transition: opacity 0.3s;
+@keyframes progressSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
- 
+@keyframes progressFill {
+  to {
+    width: var(--width);
   }
+}
 
-  
-  
+@keyframes progressGlow {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
 
+@keyframes trackerPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
 
-  .parallax {
-    background-attachment: fixed;
-    background-size: cover;
+@keyframes barGrow {
+  to {
+    transform: scaleY(1);
   }
+}
 
-  .gradientBackgroundTop,
-  .gradientBackgroundBottom {
-    position: absolute;
-    width: 100vw;
-    height: 7vh;
-    z-index: 1;
-  }
-  .gradientBackgroundTop {
-    top: 0;
-    background: linear-gradient(to bottom, #375beb4a -100%, transparent 100%);
-  }
-  .gradientBackgroundBottom {
-    bottom: 0;
-    background: linear-gradient(to top, #375beb4a -100%, transparent 100%);
-  }
+@keyframes numberCount {
+  0% { transform: scale(0.5); opacity: 0; }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
 
-  .statsContainer {
-    position: relative;
-    min-height: 40vw;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    padding: 40px;
-    z-index: 2;
-    box-shadow: 0 8px 20px #67c7ffcc, 0 -8px 20px #ab39ff66,0 8px 20px #5c00ff4d;
-    backdrop-filter: blur(50px);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .gradientText {
-    background: linear-gradient(90deg, #67c7ff, #ad39ff, #5d00ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .statsLeft {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .imageContainer {
-    position: relative;
-    border-radius: 20px 40% 20px 20px;
-    background: linear-gradient(135deg, #8c09ff, #008bff);
-    padding: 8px;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  .statsImage {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    border-radius: 12px 40% 12px 12px;
-    background-color: aqua;
-  }
-  .imageContainer:hover {
-    transform: scale(1.05);
-  }
-  .experienceTag {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: -10px;
-    left: -20px;
-    background: linear-gradient(90deg, #8c09ff, #375beb);
-    color: #fff;
-    padding: 15px 30px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-radius: 12px;
-    text-align: center;
-    height: 100px;
-    width: 200px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border: 5px solid linear-gradient(90deg, #8c09ff, #375beb);
-  }
-  .statsRight {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .statsTitle {
-    text-decoration: underline;
-    text-underline-offset: 8px;
-  }
-  .statsRight h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    color: #fff;
-    margin: 0;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  .statsRight p {
-    font-size: clamp(1rem, 2vw, 1.8rem);
-    color: #bbb;
-    line-height: 1.8;
-    margin: 20px 0;
-  }
-  .progressBars {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .progressItem {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .progressLabel {
-    display: flex;
-    justify-content: space-between;
-    font-size: clamp(1rem, 2vw, 1.6rem);
-    color: #fff;
-  }
-  .progressLabel span:first-child {
-    display: flex;
-    align-items: center;
-  }
-  .progressLabel span:first-child:before {
-    content: "✔";
-    margin-right: 8px;
-    color: #0015ff;
-  }
-  .progressBar {
-    width: 100%;
-    background-color: #202020;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 12px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  .progressFilled {
-    height: 100%;
-    background: linear-gradient(90deg, #008bff, #8c09ff);
-    transition: width 1s ease-in-out;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 3rem 1.5rem;
   }
   
-  @media (max-width: 900px) {
-    .statsContainer {
-      flex-direction: column;
-    }
+  .mainTitle {
+    font-size: 3rem;
   }
-  @media (max-width: 768px) {
-    .sectionss {
-      cursor: default;
-    }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
 
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
   }
+  
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+  
+  .mainSubtitle {
+    font-size: 1rem;
+  }
+  
+  .techStats {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievementGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .performanceInsights {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Hide complex animations on mobile for performance */
+  .dataNodes {
+    display: none;
+  }
+  
+  .connectionNetwork {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    min-height: auto;
+  }
+  
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+  }
+  
+  .dashboardContainer,
+  .progressSection,
+  .achievementSection {
+    padding: 1.5rem;
+  }
+  
+  .achievementGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement {
+    padding: 1.5rem;
+  }
+  
+  .achievementNumber {
+    font-size: 2rem;
+  }
+  
+  /* Disable background animations on mobile for performance */
+  .backgroundLayers {
+    display: none;
+  }
+}
