@@ -149,7 +149,7 @@ const NosotrosSeccion2 = () => {
         </div>
 
         {/* Bottom Stats Summary */}
-        <div className={styles.bottomStats}>
+{/*         <div className={styles.bottomStats}>
           <div className={styles.statSummaryItem}>
             <div className={styles.statNumber}>{t.stats.experience}</div>
             <div className={styles.statSummaryLabel}>{t.stats.experienceLabel}</div>
@@ -166,7 +166,7 @@ const NosotrosSeccion2 = () => {
             <div className={styles.statNumber}>{t.stats.technologies}</div>
             <div className={styles.statSummaryLabel}>{t.stats.technologiesLabel}</div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

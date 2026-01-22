@@ -126,7 +126,7 @@ export const nosotrosTranslations = {
 
     // Stats para animaciones
     stats: {
-      experience: "8+",
+      experience: "20+",
       experienceLabel: "Años de Experiencia",
       projects: "150+", 
       projectsLabel: "Proyectos Completados",
@@ -264,7 +264,7 @@ export const nosotrosTranslations = {
 
     // Stats for animations
     stats: {
-      experience: "8+",
+      experience: "20+",
       experienceLabel: "Years of Experience",
       projects: "150+",
       projectsLabel: "Completed Projects", 

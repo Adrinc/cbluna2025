@@ -1,7 +1,7 @@
 /* NosotrosSeccion2 - Why Choose Us Section with Images */
 .whyChooseSection {
   position: relative;
-  min-height: 100vh;
+  min-height: 70vh;
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #0f3460 100%);
   color: white;
   overflow: hidden;
@@ -103,7 +103,7 @@
 
 .featureCard {
   position: relative;
-  height: 500px;
+  height: 700px;
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
@@ -237,20 +237,23 @@
   font-size: 1rem;
   line-height: 1.6;
   color: #e0e0e0;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   flex-grow: 1;
 }
 
 /* Stats Container */
 .statsContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-center;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
 .statItem {
   text-align: center;
+  flex: 1 1 150px;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -392,7 +395,7 @@
   }
   
   .featureCard {
-    height: 400px;
+    height: 700px;
   }
   
   .cardContent {
@@ -425,7 +428,7 @@
   }
   
   .featureCard {
-    height: 350px;
+    height: 600px;
   }
   
   .statsContainer {

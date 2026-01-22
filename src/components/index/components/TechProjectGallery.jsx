@@ -76,7 +76,8 @@ const defaultProjects = [
     key: 'nethive', 
     imagen: '/image/carrusel_proyectos/Nethive.png',
     category: 'web',
-    technologies: ['🌐', '📡', '⚡']
+    technologies: ['🌐', '📡', '⚡'],
+    demoRoute: '/demo_nethive'
   },
   { 
     key: 'uwifi', 
@@ -209,7 +210,13 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
             style={{ '--index': index }}
             onMouseEnter={() => setHoveredProject(project.key)}
             onMouseLeave={() => setHoveredProject(null)}
-            onClick={() => onProjectSelect && onProjectSelect(project)}
+            onClick={() => {
+              if (project.demoRoute) {
+                window.location.href = project.demoRoute;
+              } else if (onProjectSelect) {
+                onProjectSelect(project);
+              }
+            }}
           >
             {/* Card Background */}
             <div className={styles.cardBackground}>

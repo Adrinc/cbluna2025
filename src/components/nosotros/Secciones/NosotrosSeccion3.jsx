@@ -175,7 +175,7 @@ const NosotrosSeccion3 = () => {
       </div>
 
       {/* Stats Section */}
-      <div className={styles.statsSection}>
+  {/*     <div className={styles.statsSection}>
         <div className={styles.statsGrid}>
           <div className={styles.statItem}>
             <div className={styles.statNumber}>{t.stats.experience}</div>
@@ -194,7 +194,7 @@ const NosotrosSeccion3 = () => {
             <div className={styles.statLabel}>{t.stats.technologiesLabel}</div>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

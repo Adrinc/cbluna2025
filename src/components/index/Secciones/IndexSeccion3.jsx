@@ -8,92 +8,7 @@ import { useRef, useEffect } from 'react';
 import styles from '../css/indexSeccion3.module.css';
 
 // Datos de proyectos con categorías
-const projectsData = [
-  { 
-    key: 'codigo_barras', 
-    imagen: '/image/carrusel_proyectos/codigo_barras.webp',
-    category: 'web',
-    technologies: ['📊', '🔍', '⚡']
-  },
-  { 
-    key: 'compras', 
-    imagen: '/image/carrusel_proyectos/compras.webp',
-    category: 'web',
-    technologies: ['💳', '🛒', '📈']
-  },
-  { 
-    key: 'control_evento', 
-    imagen: '/image/carrusel_proyectos/control_evento.webp',
-    category: 'mobile',
-    technologies: ['📅', '🎫', '👥']
-  },
-  { 
-    key: 'control_visitas', 
-    imagen: '/image/carrusel_proyectos/control_visitas.jpeg',
-    category: 'iot',
-    technologies: ['🏢', '🚪', '📋']
-  },
-  { 
-    key: 'crm', 
-    imagen: '/image/carrusel_proyectos/crm.webp',
-    category: 'ai',
-    technologies: ['🤝', '📊', '🎯']
-  },
-  { 
-    key: 'dashboards', 
-    imagen: '/image/carrusel_proyectos/dashboards.png',
-    category: 'web',
-    technologies: ['📊', '📈', '💡']
-  },
-  { 
-    key: 'diseñosweb', 
-    imagen: '/image/carrusel_proyectos/diseñosweb.webp',
-    category: 'web',
-    technologies: ['🎨', '💻', '🌐']
-  },
-  { 
-    key: 'facturacion', 
-    imagen: '/image/carrusel_proyectos/facturacion.png',
-    category: 'blockchain',
-    technologies: ['💰', '📄', '🔐']
-  },
-  { 
-    key: 'gestion_flotas', 
-    imagen: '/image/carrusel_proyectos/gestion_flotas.webp',
-    category: 'iot',
-    technologies: ['🚛', '📍', '⚡']
-  },
-  { 
-    key: 'inventario', 
-    imagen: '/image/carrusel_proyectos/inventario.jpeg',
-    category: 'ai',
-    technologies: ['📦', '🤖', '📊']
-  },
-  { 
-    key: 'recursos_humanos', 
-    imagen: '/image/carrusel_proyectos/recursos_humanos.png',
-    category: 'ai',
-    technologies: ['👥', '🧠', '📈']
-  },
-  { 
-    key: 'nethive', 
-    imagen: '/image/carrusel_proyectos/Nethive.png',
-    category: 'web',
-    technologies: ['🌐', '📡', '⚡']
-  },
-  { 
-    key: 'uwifi', 
-    imagen: '/image/carrusel_proyectos/uwifi.png',
-    category: 'iot',
-    technologies: ['📶', '5G', '🔗']
-  },
-  { 
-    key: 'ojociudadano', 
-    imagen: '/image/carrusel_proyectos/ojociudadano.png',
-    category: 'ai',
-    technologies: ['👁️', '🤖', '📱']
-  }
-];
+
 
 const IndexSeccion3 = () => {
   const ingles = useStore(isEnglish);
@@ -167,7 +82,7 @@ const IndexSeccion3 = () => {
         {/* Tech project gallery */}
         <div className={styles.galleryContainer}>
           <TechProjectGallery 
-            projects={projectsData}
+         
             onProjectSelect={(project) => {
               console.log('Proyecto seleccionado:', project);
               // Aquí puedes agregar lógica para manejar la selección del proyecto
@@ -176,13 +91,7 @@ const IndexSeccion3 = () => {
         </div>
       </div>
 
-      {/* Floating tech elements */}
-{/*       <div className={styles.floatingElements}>
-        <div className={styles.floatingIcon} style={{'--delay': '0s'}}>⚡</div>
-        <div className={styles.floatingIcon} style={{'--delay': '1s'}}>🔮</div>
-        <div className={styles.floatingIcon} style={{'--delay': '2s'}}>🚀</div>
-        <div className={styles.floatingIcon} style={{'--delay': '3s'}}>💎</div>
-      </div> */}
+
     </section>
   );
 };

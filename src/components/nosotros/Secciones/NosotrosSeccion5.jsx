@@ -186,7 +186,7 @@ const NosotrosSeccion5 = () => {
             onClick={handleContactClick}
           >
             <div className={styles.buttonInner}>
-              <span className={styles.buttonText}>{t.cta.button}</span>
+              <span className={styles.buttonText}>{t.cta.buttonText}</span>
               <div className={styles.buttonIcon}>→</div>
             </div>
             
