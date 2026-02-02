@@ -142,8 +142,8 @@ export const translations = {
     },
 
 
-    projectsTitle: "Nuestros proyectos",
-    projectsSubtitle: "Un poco de nuestro trabajo",
+    projectsTitle: "Nuestros servicios",
+    projectsSubtitle: "Soluciones que potencian tu negocio",
     navbar: {
       home: "Inicio",
       about: "Nosotros",
@@ -182,6 +182,10 @@ export const translations = {
         titulo: "Dashboards",
         subtitulo: "Visualiza y analiza datos clave para decisiones estratégicas."
       },
+      content_manager: {
+        titulo: "Gestor de Contenido Multimedia",
+        subtitulo: "Administra y distribuye archivos multimedia en redes y portales."
+      },
       diseñosweb: {
         titulo: "Diseños Web",
         subtitulo: "Sitios web modernos, funcionales y atractivos."
@@ -202,17 +206,17 @@ export const translations = {
         titulo: "Recursos Humanos",
         subtitulo: "Automatiza y centraliza la gestión del personal."
       },
-      nethive: {
-        titulo: "NetHive",
-        subtitulo: "Gestión integral de infraestructura de telecomunicaciones."
+      mdf_idf: {
+        titulo: "MDF / IDF",
+        subtitulo: "Gestión profesional de infraestructura de telecomunicaciones."
       },
       uwifi: {
-        titulo: "U-wifi",
-        subtitulo: "Internet 5G portable, gratis con anuncios o plan económico."
+        titulo: "Gestión de Conectividad",
+        subtitulo: "Administra y optimiza el acceso a internet desde una plataforma centralizada."
       },
       ojociudadano: {
-        titulo: "Ojo Ciudadano",
-        subtitulo: "Plataforma IA para reportar incidentes urbanos inteligentemente."
+        titulo: "Reportes Inteligentes con IA",
+        subtitulo: "Convierte imágenes y descripciones en reportes estructurados automáticamente."
       }
     },
     stats: {
@@ -532,8 +536,8 @@ export const translations = {
       }
     },
 
-    projectsTitle: "Our Projects",
-    projectsSubtitle: "A glimpse of our work",
+    projectsTitle: "Our Services",
+    projectsSubtitle: "Solutions that empower your business",
     navbar: {
       home: "Home",
       about: "About Us",
@@ -572,6 +576,10 @@ export const translations = {
         titulo: "Dashboards",
         subtitulo: "Visualize and analyze key data for strategic decisions."
       },
+      content_manager: {
+        titulo: "Multimedia Content Manager",
+        subtitulo: "Manage and distribute multimedia files across networks and portals."
+      },
       diseñosweb: {
         titulo: "Web Design",
         subtitulo: "Modern, functional, and attractive websites."
@@ -592,17 +600,17 @@ export const translations = {
         titulo: "Human Resources",
         subtitulo: "Automate and centralize personnel management."
       },
-      nethive: {
-        titulo: "NetHive",
-        subtitulo: "Comprehensive telecommunications infrastructure management."
+      mdf_idf: {
+        titulo: "MDF / IDF",
+        subtitulo: "Professional telecommunications infrastructure management."
       },
       uwifi: {
-        titulo: "U-wifi",
-        subtitulo: "Portable 5G internet, free with ads or affordable plan."
+        titulo: "Connectivity Management",
+        subtitulo: "Manage and optimize internet access from a centralized platform."
       },
       ojociudadano: {
-        titulo: "Citizen Eye",
-        subtitulo: "AI platform for intelligently reporting urban incidents."
+        titulo: "Intelligent Reports with AI",
+        subtitulo: "Transform images and descriptions into structured reports automatically."
       }
     },
     stats: {

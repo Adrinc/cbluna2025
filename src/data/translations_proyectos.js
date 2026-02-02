@@ -9,7 +9,8 @@ export const proyectosTranslations = {
         "Optimización de rutas y costos.",
         "Reportes detallados de desempeño."
       ],
-      imagen: "/image/carrusel_proyectos/gestion_flotas.webp"
+      imagen: "/image/carrusel_proyectos/gestion_flotas.webp",
+      demoUrl: "https://cbluna.com/cbl_gestion_flotas_demo_web"
     },
     {
       titulo: "CRM",
@@ -20,7 +21,8 @@ export const proyectosTranslations = {
         "Reportes y análisis para toma de decisiones.",
         "Integración con correo y herramientas de marketing."
       ],
-      imagen: "/image/carrusel_proyectos/crm.webp"
+      imagen: "/image/carrusel_proyectos/crm.webp",
+      demoUrl: "https://cbluna.com/cbl_crm_demo_web"
     },
     {
       titulo: "Facturación",
@@ -42,7 +44,8 @@ export const proyectosTranslations = {
         "Reportes detallados de movimientos.",
         "Integración con ventas y compras."
       ],
-      imagen: "/image/carrusel_proyectos/inventario.jpeg"
+      imagen: "/image/carrusel_proyectos/inventario.jpeg",
+      demoUrl: "https://cbluna.com/cbl_inventarios_demo_web"
     },
     {
       titulo: "Recursos humanos",
@@ -86,7 +89,8 @@ export const proyectosTranslations = {
         "Búsqueda rápida y categorización inteligente.",
         "Integración con otras plataformas y herramientas."
       ],
-      imagen: "/image/carrusel_proyectos/gestion_videos.webp"
+      imagen: "/image/carrusel_proyectos/gestion_videos.webp",
+      demoUrl: "https://cbluna.com/cbl_content_manager_demo_web"
     },
     {
       titulo: "Gestión de visitas",
@@ -119,44 +123,59 @@ export const proyectosTranslations = {
         "Integración con múltiples fuentes de información.",
         "Tableros interactivos para un mejor control y toma de decisiones."
       ],
-      imagen: "/image/carrusel_proyectos/dashboards.png"
+      imagen: "/image/carrusel_proyectos/dashboards.png",
+      demoUrl: "https://cbluna.com/cbl_dashboards_demo_web"
     },
     {
-      titulo: "NetHive",
-      descripcion: "NetHive es una aplicación moderna desarrollada en Flutter que permite administrar de manera integral la infraestructura de telecomunicaciones de empresas y negocios. Con un backend en Supabase y una interfaz responsiva, facilita la gestión de componentes de red, el monitoreo de su estado y la visualización de topologías en tiempo real.",
+      titulo: "Gestor de Contenido Multimedia",
+      descripcion: "Organiza, edita y distribuye tu contenido multimedia de manera eficiente. Sistema especializado en la gestión de archivos multimedia y su distribución en redes sociales, portales web y plataformas digitales. Accede fácilmente a imágenes, videos y documentos para optimizar flujos de trabajo.",
       puntos: [
-        "Administración de empresas y negocios con infraestructura propia.",
-        "Inventario completo de componentes de red.",
-        "Dashboards con métricas, alertas y actividad reciente.",
-        "Visualización de topologías y conexiones de red.",
-        "Sistema responsivo para escritorio y móvil.",
-        "Integración en tiempo real con Supabase."
+        "Almacenamiento centralizado y organización inteligente.",
+        "Edición y administración de imágenes, videos y documentos.",
+        "Distribución automática en redes sociales y portales.",
+        "Búsqueda rápida y categorización por metadatos.",
+        "Integración con plataformas digitales y CDN."
       ],
-      imagen: "/image/carrusel_proyectos/Nethive.png"
+      imagen: "/image/carrusel_proyectos/content_manager.png",
+      demoUrl: "https://cbluna.com/cbl_content_manager_demo_web"
     },
     {
-      titulo: "U-wifi",
-      descripcion: "U-wifi es un innovador servicio de internet que aprovecha la tecnología 5G para ofrecer conexión de alta velocidad en cualquier lugar, sin necesidad de cables ni contratos. Su modelo flexible permite elegir entre internet gratuito con anuncios o un plan económico de pago, garantizando conectividad confiable y redundante para hogares y negocios.",
+      titulo: "MDF / IDF",
+      descripcion: "Sistema profesional para la gestión integral de infraestructura de telecomunicaciones, incluyendo Main Distribution Frame (MDF) e Intermediate Distribution Frame (IDF). Facilita la administración de componentes de red, monitoreo de estado en tiempo real y visualización de topologías para empresas y negocios.",
       puntos: [
-        "Internet GRATIS con anuncios o $38/mes sin anuncios.",
-        "Router portátil plug & play.",
-        "Redundancia integrada entre redes 5G.",
-        "Internet ilimitado, sin contratos.",
-        "Compatible con hogares y negocios.",
-        "Envío gratis y activación en segundos."
+        "Gestión completa de MDF e IDF.",
+        "Inventario detallado de componentes y conexiones.",
+        "Dashboards con métricas, alertas y actividad reciente.",
+        "Visualización de topologías y diagramas de red.",
+        "Sistema responsivo para escritorio y móvil.",
+        "Monitoreo en tiempo real de infraestructura."
+      ],
+      imagen: "/image/carrusel_proyectos/Nethive.png",
+      demoUrl: "https://cbluna.com/cbl_mdf_demo_web"
+    },
+    {
+      titulo: "Gestión de Conectividad a Internet",
+      descripcion: "Plataforma centralizada para administrar, controlar y optimizar el acceso a internet entre dispositivos, usuarios y ubicaciones. Sistema profesional para ISPs, empresas y redes corporativas que requieren control total sobre la conectividad de su infraestructura.",
+      puntos: [
+        "Control de acceso por usuario, dispositivo y horario.",
+        "Administración centralizada de módems y routers.",
+        "Orquestación inteligente de ancho de banda.",
+        "Portal de acceso configurable y personalizable.",
+        "Analítica y monitoreo de consumo en tiempo real.",
+        "Escalable para múltiples ubicaciones desde un solo panel."
       ],
       imagen: "/image/carrusel_proyectos/uwifi.png"
     },
     {
-      titulo: "Ojo Ciudadano",
-      descripcion: "Ojo Ciudadano es una plataforma digital (app móvil + sitio web) diseñada para empoderar a los ciudadanos a reportar incidentes urbanos de manera rápida y confiable. La IA analiza fotos, comentarios y ubicaciones para validar la información, categorizar incidentes y asignar prioridades, canalizando los reportes hacia las autoridades correspondientes.",
+      titulo: "Plataforma de Reportes Inteligentes con IA",
+      descripcion: "Sistema avanzado que convierte imágenes y descripciones en reportes estructurados, clasificados y priorizados automáticamente mediante inteligencia artificial. Ideal para gobiernos, empresas de servicios, parques industriales y operadores que necesitan gestionar incidentes de manera eficiente.",
       puntos: [
-        "Reporte de incidentes con foto, comentario y ubicación.",
-        "IA para análisis de imágenes y validación de texto.",
-        "Identificación de emociones en el reporte.",
-        "Clasificación automática en categorías: tránsito, seguridad, alumbrado, etc.",
-        "Asignación de prioridad según gravedad y riesgo.",
-        "Demo web interactivo con simulación IA."
+        "Análisis de imágenes en tiempo real para identificar elementos clave.",
+        "Interpretación automática de descripciones con procesamiento de lenguaje natural.",
+        "Detección de emoción y asignación de urgencia inteligente.",
+        "Clasificación automática por categorías (tránsito, seguridad, infraestructura).",
+        "Sistema de priorización dinámica según riesgo y evidencia.",
+        "Integrable con CRMs, ERPs y sistemas internos vía API."
       ],
       imagen: "/image/carrusel_proyectos/ojociudadano.png"
     }
@@ -172,7 +191,8 @@ export const proyectosTranslations = {
         "Route and cost optimization.",
         "Detailed performance reports."
       ],
-      imagen: "/image/carrusel_proyectos/gestion_flotas.webp"
+      imagen: "/image/carrusel_proyectos/gestion_flotas.webp",
+      demoUrl: "https://cbluna.com/cbl_gestion_flotas_demo_web"
     },
     {
       titulo: "CRM",
@@ -183,7 +203,8 @@ export const proyectosTranslations = {
         "Reports and decision-making analysis.",
         "Integration with email and marketing tools."
       ],
-      imagen: "/image/carrusel_proyectos/crm.webp"
+      imagen: "/image/carrusel_proyectos/crm.webp",
+      demoUrl: "https://cbluna.com/cbl_crm_demo_web"
     },
     {
       titulo: "Billing",
@@ -205,7 +226,8 @@ export const proyectosTranslations = {
         "Detailed movement reports.",
         "Integration with sales and purchases."
       ],
-      imagen: "/image/carrusel_proyectos/inventario.jpeg"
+      imagen: "/image/carrusel_proyectos/inventario.jpeg",
+      demoUrl: "https://cbluna.com/cbl_inventarios_demo_web"
     },
     {
       titulo: "Human Resources",
@@ -249,7 +271,8 @@ export const proyectosTranslations = {
         "Fast search and smart categorization.",
         "Integration with other platforms and tools."
       ],
-      imagen: "/image/carrusel_proyectos/gestion_videos.webp"
+      imagen: "/image/carrusel_proyectos/gestion_videos.webp",
+      demoUrl: "https://cbluna.com/cbl_content_manager_demo_web"
     },
     {
       titulo: "Visitor Management",
@@ -282,44 +305,59 @@ export const proyectosTranslations = {
         "Integration with multiple data sources.",
         "Interactive dashboards for better control and decision-making."
       ],
-      imagen: "/image/carrusel_proyectos/dashboards.png"
+      imagen: "/image/carrusel_proyectos/dashboards.png",
+      demoUrl: "https://cbluna.com/cbl_dashboards_demo_web"
     },
     {
-      titulo: "NetHive",
-      descripcion: "NetHive is a modern Flutter application that enables comprehensive management of telecommunications infrastructure for companies and businesses. With Supabase as backend and a responsive interface, it facilitates component inventory management, monitoring, and real-time topology visualization.",
+      titulo: "Multimedia Content Manager",
+      descripcion: "Organize, edit, and distribute your multimedia content efficiently. Specialized system for managing multimedia files and their distribution across social networks, web portals, and digital platforms. Easily access images, videos, and documents to optimize workflows.",
       puntos: [
-        "Management of companies and businesses with dedicated infrastructure.",
-        "Complete network component inventory.",
-        "Dashboards with metrics, alerts, and activity feed.",
-        "Network topology visualization.",
-        "Responsive design for desktop and mobile.",
-        "Real-time integration with Supabase."
+        "Centralized storage and intelligent organization.",
+        "Editing and management of images, videos, and documents.",
+        "Automatic distribution to social networks and portals.",
+        "Fast search and metadata categorization.",
+        "Integration with digital platforms and CDN."
       ],
-      imagen: "/image/carrusel_proyectos/Nethive.png"
+      imagen: "/image/carrusel_proyectos/content_manager.png",
+      demoUrl: "https://cbluna.com/cbl_content_manager_demo_web"
     },
     {
-      titulo: "U-wifi",
-      descripcion: "U-wifi is an innovative internet service that leverages 5G technology to provide high-speed connectivity anywhere, without cables or contracts. Its flexible model lets users choose between free internet with ads or a low-cost paid plan, ensuring reliable and redundant connectivity for homes and businesses.",
+      titulo: "MDF / IDF",
+      descripcion: "Professional system for comprehensive telecommunications infrastructure management, including Main Distribution Frame (MDF) and Intermediate Distribution Frame (IDF). Facilitates network component administration, real-time status monitoring, and topology visualization for businesses and enterprises.",
       puntos: [
-        "FREE internet with ads or $38/month without ads.",
-        "Portable plug & play router.",
-        "Integrated redundancy across 5G networks.",
-        "Unlimited internet, no contracts.",
-        "Suitable for homes and businesses.",
-        "Free shipping and instant activation."
+        "Complete MDF and IDF management.",
+        "Detailed component and connection inventory.",
+        "Dashboards with metrics, alerts, and activity feed.",
+        "Network topology and diagram visualization.",
+        "Responsive design for desktop and mobile.",
+        "Real-time infrastructure monitoring."
+      ],
+      imagen: "/image/carrusel_proyectos/Nethive.png",
+      demoUrl: "https://cbluna.com/cbl_mdf_demo_web"
+    },
+    {
+      titulo: "Internet Connectivity Management",
+      descripcion: "Centralized platform to manage, control, and optimize internet access across devices, users, and locations. Professional system for ISPs, enterprises, and corporate networks requiring full control over their connectivity infrastructure.",
+      puntos: [
+        "Access control by user, device, and schedule.",
+        "Centralized management of modems and routers.",
+        "Intelligent bandwidth orchestration.",
+        "Configurable and customizable access portal.",
+        "Real-time analytics and consumption monitoring.",
+        "Scalable for multiple locations from a single panel."
       ],
       imagen: "/image/carrusel_proyectos/uwifi.png"
     },
     {
-      titulo: "Ojo Ciudadano",
-      descripcion: "Ojo Ciudadano is a digital platform (mobile app + website) designed to empower citizens to report urban incidents quickly and reliably. AI analyzes photos, comments, and locations to validate information, categorize incidents, and assign priorities, channeling reports to the corresponding authorities.",
+      titulo: "Intelligent Reports Platform with AI",
+      descripcion: "Advanced system that transforms images and descriptions into structured, classified, and prioritized reports automatically using artificial intelligence. Ideal for governments, service companies, industrial parks, and operators needing efficient incident management.",
       puntos: [
-        "Incident reporting with photo, comment, and location.",
-        "AI for image analysis and text validation.",
-        "Emotion detection in reports.",
-        "Automatic categorization: traffic, security, lighting, etc.",
-        "Priority assignment based on severity and risk.",
-        "Interactive demo simulating AI analysis."
+        "Real-time image analysis to identify key elements.",
+        "Automatic description interpretation with natural language processing.",
+        "Emotion detection and intelligent urgency assignment.",
+        "Automatic categorization (traffic, security, infrastructure).",
+        "Dynamic prioritization system based on risk and evidence.",
+        "Integrable with CRMs, ERPs, and internal systems via API."
       ],
       imagen: "/image/carrusel_proyectos/ojociudadano.png"
     }

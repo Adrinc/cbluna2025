@@ -45,8 +45,12 @@ const projectsData = [
     category: 'web',
     technologies: ['📊', '📈', '💡']
   },
-  { 
-    key: 'diseñosweb', 
+  {     key: 'content_manager', 
+    imagen: '/image/carrusel_proyectos/content_manager.png',
+    category: 'web',
+    technologies: ['📹', '🖼️', '📦']
+  },
+  {     key: 'diseñosweb', 
     imagen: '/image/carrusel_proyectos/diseñosweb.webp',
     category: 'web',
     technologies: ['🎨', '💻', '🌐']
@@ -76,7 +80,7 @@ const projectsData = [
     technologies: ['👥', '🧠', '📈']
   },
   { 
-    key: 'nethive', 
+    key: 'mdf_idf', 
     imagen: '/image/carrusel_proyectos/Nethive.png',
     category: 'web',
     technologies: ['🌐', '📡', '⚡']
@@ -150,7 +154,7 @@ const IndexSeccion3 = () => {
         <div className={styles.content}>
           <div className={styles.headerBadge}>
             <span className={styles.pulse} />
-            <span className={styles.badgeText}>ADVANCED TECH PORTFOLIO</span>
+            <span className={styles.badgeText}>{ingles ? 'OUR SERVICES' : 'NUESTROS SERVICIOS'}</span>
           </div>
           <h1 className={styles.title}>
             <span className={styles.titleGlow}>{t.projectsTitle}</span>
@@ -168,21 +172,11 @@ const IndexSeccion3 = () => {
         <div className={styles.galleryContainer}>
           <TechProjectGallery 
             projects={projectsData}
-            onProjectSelect={(project) => {
-              console.log('Proyecto seleccionado:', project);
-              // Aquí puedes agregar lógica para manejar la selección del proyecto
-            }}
           />
         </div>
       </div>
 
-      {/* Floating tech elements */}
-{/*       <div className={styles.floatingElements}>
-        <div className={styles.floatingIcon} style={{'--delay': '0s'}}>⚡</div>
-        <div className={styles.floatingIcon} style={{'--delay': '1s'}}>🔮</div>
-        <div className={styles.floatingIcon} style={{'--delay': '2s'}}>🚀</div>
-        <div className={styles.floatingIcon} style={{'--delay': '3s'}}>💎</div>
-      </div> */}
+
     </section>
   );
 };

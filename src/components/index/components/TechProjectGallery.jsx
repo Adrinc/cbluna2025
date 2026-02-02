@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { translations } from '../../../data/translations';
+import { proyectosTranslations } from '../../../data/translations_proyectos';
 import { isEnglish } from '../../../data/variables';
 import { useStore } from '@nanostores/react';
 import styles from '../css/techProjectGallery.module.css';
@@ -42,8 +43,12 @@ const defaultProjects = [
     category: 'web',
     technologies: ['📊', '📈', '💡']
   },
-  { 
-    key: 'diseñosweb', 
+  {     key: 'content_manager', 
+    imagen: '/image/carrusel_proyectos/content_manager.png',
+    category: 'web',
+    technologies: ['📹', '🖼️', '📦']
+  },
+  {     key: 'diseñosweb', 
     imagen: '/image/carrusel_proyectos/diseñosweb.webp',
     category: 'web',
     technologies: ['🎨', '💻', '🌐']
@@ -73,7 +78,7 @@ const defaultProjects = [
     technologies: ['👥', '🧠', '📈']
   },
   { 
-    key: 'nethive', 
+    key: 'mdf_idf', 
     imagen: '/image/carrusel_proyectos/Nethive.png',
     category: 'web',
     technologies: ['🌐', '📡', '⚡']
@@ -101,10 +106,10 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
   const containerRef = useRef(null);
 
   const categories = [
-    { id: 'all', label: 'Todos', icon: '⚡' },
+    { id: 'all', label: ingles ? 'All' : 'Todos', icon: '⚡' },
     { id: 'web', label: 'Web', icon: '🌐' },
-    { id: 'mobile', label: 'Móvil', icon: '📱' },
-    { id: 'ai', label: 'IA & ML', icon: '🤖' },
+    { id: 'mobile', label: ingles ? 'Mobile' : 'Móvil', icon: '📱' },
+    { id: 'ai', label: ingles ? 'AI & ML' : 'IA & ML', icon: '🤖' },
     { id: 'blockchain', label: 'Blockchain', icon: '⛓️' },
     { id: 'iot', label: 'IoT', icon: '🔗' },
   ];
@@ -149,15 +154,53 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
     ? projects 
     : projects.filter(project => project.category === selectedCategory);
 
+  // Mapeo de keys a títulos para encontrar proyectos en translations_proyectos
+  const keyToTitleMap = {
+    'gestion_flotas': 'gestión de flotas',
+    'crm': 'crm',
+    'facturacion': 'facturación',
+    'inventario': 'inventarios',
+    'recursos_humanos': 'recursos humanos',
+    'diseñosweb': 'sitios web',
+    'gestion_venta': 'gestión de venta',
+    'gestion_videos': 'gestor de contenido multimedia',
+    'content_manager': 'gestor de contenido multimedia',
+    'control_visitas': 'gestión de visitas',
+    'compras': 'compras',
+    'dashboards': 'dashboards',
+    'mdf_idf': 'mdf / idf',
+    'uwifi': 'gestión de conectividad',
+    'ojociudadano': 'reportes inteligentes'
+  };
+
   // Agregar información de traducción a cada proyecto
+  const proyectosList = ingles ? proyectosTranslations.en : proyectosTranslations.es;
   const enhancedProjects = filteredProjects.map(project => {
     const info = t.projectsCarrusel?.[project.key] || {};
+    
+    // Buscar el proyecto completo en proyectosTranslations usando el mapeo
+    const searchTitle = keyToTitleMap[project.key] || project.key.replace(/_/g, ' ');
+    const fullProjectInfo = proyectosList.find(p => {
+      return p.titulo.toLowerCase().includes(searchTitle.toLowerCase()) || 
+             searchTitle.toLowerCase().includes(p.titulo.toLowerCase());
+    });
+    
     return {
       ...project,
       titulo: info.titulo || project.key,
-      subtitulo: info.subtitulo || 'Solución tecnológica avanzada'
+      subtitulo: info.subtitulo || 'Solución tecnológica avanzada',
+      demoUrl: fullProjectInfo?.demoUrl
     };
   });
+
+  const handleProjectClick = (project) => {
+    if (project.demoUrl) {
+      window.location.href = project.demoUrl;
+    }
+    if (onProjectSelect) {
+      onProjectSelect(project);
+    }
+  };
 
   return (
     <div ref={containerRef} className={`${styles.galleryContainer} ${isVisible ? styles.visible : ''}`}>
@@ -183,7 +226,7 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
       <div className={styles.categoryFilters}>
         <div className={styles.filterTitle}>
           <span className={styles.filterIcon}>🔍</span>
-          CATEGORÍAS TECNOLÓGICAS
+          {ingles ? 'TECHNOLOGY CATEGORIES' : 'CATEGORÍAS TECNOLÓGICAS'}
         </div>
         <div className={styles.filterButtons}>
           {categories.map((category) => (
@@ -205,11 +248,11 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
         {enhancedProjects.map((project, index) => (
           <div
             key={project.key}
-            className={`${styles.projectCard} ${hoveredProject === project.key ? styles.hovered : ''}`}
+            className={`${styles.projectCard} ${hoveredProject === project.key ? styles.hovered : ''} ${project.demoUrl ? styles.hasDemo : ''}`}
             style={{ '--index': index }}
             onMouseEnter={() => setHoveredProject(project.key)}
             onMouseLeave={() => setHoveredProject(null)}
-            onClick={() => onProjectSelect && onProjectSelect(project)}
+            onClick={() => handleProjectClick(project)}
           >
             {/* Card Background */}
             <div className={styles.cardBackground}>
@@ -233,7 +276,7 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
                 <h3 className={styles.cardTitle}>{project.titulo}</h3>
                 <div className={styles.statusIndicator}>
                   <div className={styles.statusDot}></div>
-                  <span>ACTIVO</span>
+                  <span>{ingles ? 'ACTIVE' : 'ACTIVO'}</span>
                 </div>
               </div>
               
@@ -256,7 +299,7 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
 
               <div className={styles.cardActions}>
                 <button className={styles.actionButton}>
-                  <span>EXPLORAR</span>
+                  <span>{project.demoUrl ? (ingles ? 'LIVE DEMO' : 'DEMO EN VIVO') : (ingles ? 'EXPLORE' : 'EXPLORAR')}</span>
                   <div className={styles.actionGlow}></div>
                 </button>
               </div>

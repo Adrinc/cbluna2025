@@ -213,10 +213,15 @@ const ProyectosSeccion1 = () => {
                 <span>{ingles ? 'View Details' : 'Ver Detalles'}</span>
                 <div className={styles.actionIcon}>→</div>
               </button>
-              <button className={styles.secondaryAction}>
-                <span>{ingles ? 'Live Demo' : 'Demo en Vivo'}</span>
-                <div className={styles.actionIcon}>🔗</div>
-              </button>
+              {currentProject?.demoUrl && (
+                <button 
+                  className={styles.secondaryAction}
+                  onClick={() => window.location.href = currentProject.demoUrl}
+                >
+                  <span>{ingles ? 'Live Demo' : 'Demo en Vivo'}</span>
+                  <div className={styles.actionIcon}>🔗</div>
+                </button>
+              )}
             </div>
           </div>
         </div>
