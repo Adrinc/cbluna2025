@@ -101,7 +101,8 @@ export const proyectosTranslations = {
         "Seguimiento de estadísticas de visitas.",
         "Integración con sistemas de seguridad."
       ],
-      imagen: "/image/carrusel_proyectos/control_visitas.jpeg"
+      imagen: "/image/carrusel_proyectos/control_visitas.jpeg",
+      demoUrl: "https://cbluna.com/cbl_gestor_visitas_demo_web"
     },
     {
       titulo: "Compras",
@@ -283,7 +284,8 @@ export const proyectosTranslations = {
         "Visitor statistics tracking.",
         "Integration with security systems."
       ],
-      imagen: "/image/carrusel_proyectos/control_visitas.jpeg"
+      imagen: "/image/carrusel_proyectos/control_visitas.jpeg",
+      demoUrl: "https://cbluna.com/cbl_gestor_visitas_demo_web"
     },
     {
       titulo: "Purchases",
