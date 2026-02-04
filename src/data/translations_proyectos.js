@@ -116,6 +116,19 @@ export const proyectosTranslations = {
       imagen: "/image/carrusel_proyectos/compras.webp"
     },
     {
+      titulo: "Control de Eventos",
+      descripcion: "Sistema integral para la organización y gestión de eventos de principio a fin. Controla asistentes, acreditaciones, accesos y seguimiento en tiempo real, todo desde una plataforma centralizada diseñada para eventos de cualquier escala.",
+      puntos: [
+        "Registro y acreditación digital de asistentes.",
+        "Control de accesos con códigos QR y NFC.",
+        "Dashboard en tiempo real con métricas clave.",
+        "Gestión de horarios, sesiones y ubicaciones.",
+        "Reportes detallados post-evento."
+      ],
+      imagen: "/image/carrusel_proyectos/control_evento.webp",
+      demoUrl: "https://cbluna.com/cbl_control_eventos_demo_web"
+    },
+    {
       titulo: "Dashboards",
       descripcion: "Creamos dashboards dinámicos e intuitivos que transforman datos complejos en información clara y accionable. Obtén una visión completa de tu negocio con métricas clave y reportes en tiempo real para tomar mejores decisiones.",
       puntos: [
@@ -297,6 +310,19 @@ export const proyectosTranslations = {
         "Cost analysis reports."
       ],
       imagen: "/image/carrusel_proyectos/compras.webp"
+    },
+    {
+      titulo: "Event Management",
+      descripcion: "Comprehensive system for organizing and managing events from start to finish. Control attendees, credentials, access, and real-time tracking, all from a centralized platform designed for events of any scale.",
+      puntos: [
+        "Digital registration and attendee credentialing.",
+        "Access control with QR codes and NFC.",
+        "Real-time dashboard with key metrics.",
+        "Schedule, session, and location management.",
+        "Detailed post-event reports."
+      ],
+      imagen: "/image/carrusel_proyectos/control_evento.webp",
+      demoUrl: "https://cbluna.com/cbl_control_eventos_demo_web"
     },
     {
       titulo: "Dashboards",

@@ -167,6 +167,7 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
     'content_manager': 'gestor de contenido multimedia',
     'control_visitas': 'gestión de visitas',
     'compras': 'compras',
+    'control_evento': 'control de eventos',
     'dashboards': 'dashboards',
     'mdf_idf': 'mdf / idf',
     'uwifi': 'gestión de conectividad',
