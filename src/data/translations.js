@@ -191,8 +191,8 @@ export const translations = {
         subtitulo: "Sitios web modernos, funcionales y atractivos."
       },
       facturacion: {
-        titulo: "Facturación",
-        subtitulo: "Simplifica la emisión y control de facturas."
+        titulo: "Operaciones Financieras",
+        subtitulo: "Optimiza pagos, facturación y gestión financiera integral."
       },
       gestion_flotas: {
         titulo: "Gestión de Flotas",
@@ -585,8 +585,8 @@ export const translations = {
         subtitulo: "Modern, functional, and attractive websites."
       },
       facturacion: {
-        titulo: "Invoicing",
-        subtitulo: "Simplify the issuance and control of invoices."
+        titulo: "Financial Operations",
+        subtitulo: "Optimize payments, invoicing, and comprehensive financial management."
       },
       gestion_flotas: {
         titulo: "Fleet Management",

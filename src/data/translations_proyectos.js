@@ -25,15 +25,17 @@ export const proyectosTranslations = {
       demoUrl: "https://cbluna.com/cbl_crm_demo_web"
     },
     {
-      titulo: "Facturación",
-      descripcion: "Ofrecemos sistemas de facturación electrónica diseñados para automatizar procesos, generar reportes fiscales y garantizar el cumplimiento de normativas legales, optimizando el flujo financiero de tu negocio.",
+      titulo: "Operaciones Financieras",
+      descripcion: "Sistema integral que optimiza y automatiza todo el ciclo financiero de tu negocio: pagos, facturación electrónica, conciliación bancaria y reportes fiscales. Todo centralizado en una sola plataforma para maximizar la eficiencia operativa.",
       puntos: [
-        "Generación automática de facturas electrónicas.",
-        "Registro y control de pagos.",
-        "Reportes fiscales y financieros.",
-        "Integración con sistemas contables."
+        "Facturación electrónica automatizada con trazabilidad completa.",
+        "Gestión inteligente de pagos y cobranza.",
+        "Conciliación bancaria automática y reportes en tiempo real.",
+        "Análisis financiero avanzado con proyecciones y KPIs.",
+        "Cumplimiento fiscal automatizado e integración contable."
       ],
-      imagen: "/image/carrusel_proyectos/facturacion.png"
+      imagen: "/image/carrusel_proyectos/facturacion.png",
+      demoUrl: "https://cbluna.com/cbl_operaciones_financieras_demo_web"
     },
     {
       titulo: "Inventarios",
@@ -221,15 +223,17 @@ export const proyectosTranslations = {
       demoUrl: "https://cbluna.com/cbl_crm_demo_web"
     },
     {
-      titulo: "Billing",
-      descripcion: "We offer electronic billing systems designed to automate processes, generate tax reports, and ensure compliance with legal regulations, optimizing your business financial flow.",
+      titulo: "Financial Operations",
+      descripcion: "Comprehensive system that optimizes and automates your entire business financial cycle: payments, electronic invoicing, bank reconciliation, and tax reports. All centralized on a single platform to maximize operational efficiency.",
       puntos: [
-        "Automatic generation of electronic invoices.",
-        "Payment tracking and control.",
-        "Tax and financial reports.",
-        "Integration with accounting systems."
+        "Automated electronic invoicing with complete traceability.",
+        "Intelligent payment and collection management.",
+        "Automatic bank reconciliation and real-time reports.",
+        "Advanced financial analysis with projections and KPIs.",
+        "Automated tax compliance and accounting integration."
       ],
-      imagen: "/image/carrusel_proyectos/facturacion.png"
+      imagen: "/image/carrusel_proyectos/facturacion.png",
+      demoUrl: "https://cbluna.com/cbl_operaciones_financieras_demo_web"
     },
     {
       titulo: "Inventory",

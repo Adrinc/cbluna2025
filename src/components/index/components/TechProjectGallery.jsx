@@ -158,7 +158,7 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
   const keyToTitleMap = {
     'gestion_flotas': 'gestión de flotas',
     'crm': 'crm',
-    'facturacion': 'facturación',
+    'facturacion': 'operaciones financieras',
     'inventario': 'inventarios',
     'recursos_humanos': 'recursos humanos',
     'diseñosweb': 'sitios web',
