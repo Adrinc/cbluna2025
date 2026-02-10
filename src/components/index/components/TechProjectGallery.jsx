@@ -156,6 +156,7 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
 
   // Mapeo de keys a títulos para encontrar proyectos en translations_proyectos
   const keyToTitleMap = {
+    'codigo_barras': 'sistema pos',
     'gestion_flotas': 'gestión de flotas',
     'crm': 'crm',
     'facturacion': 'operaciones financieras',

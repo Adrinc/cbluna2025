@@ -159,8 +159,8 @@ export const translations = {
     },
     projectsCarrusel: {
       codigo_barras: {
-        titulo: "Código de Barras",
-        subtitulo: "Digitaliza la identificación y rastreo de productos."
+        titulo: "Sistema POS",
+        subtitulo: "Punto de venta completo con escaneo y gestión en tiempo real."
       },
       compras: {
         titulo: "Compras",
@@ -553,8 +553,8 @@ export const translations = {
     },
     projectsCarrusel: {
       codigo_barras: {
-        titulo: "Barcodes",
-        subtitulo: "Digitize product identification and tracking."
+        titulo: "POS System",
+        subtitulo: "Complete point of sale with scanning and real-time management."
       },
       compras: {
         titulo: "Purchases",

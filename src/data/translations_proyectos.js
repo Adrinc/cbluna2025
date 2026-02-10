@@ -1,6 +1,19 @@
 export const proyectosTranslations = {
   es: [
     {
+      titulo: "Sistema POS",
+      descripcion: "Punto de venta completo y profesional que integra escaneo de códigos de barras, gestión de inventario en tiempo real, caja registradora digital y reportes de ventas. Ideal para supermercados, tiendas retail y cualquier negocio que requiera un sistema ágil y confiable.",
+      puntos: [
+        "Escaneo rápido con pistola láser o lector de códigos.",
+        "Gestión de inventario y actualización automática de stock.",
+        "Caja registradora digital con múltiples formas de pago.",
+        "Reportes de ventas y estadísticas en tiempo real.",
+        "Interfaz intuitiva y fácil de usar para cajeros."
+      ],
+      imagen: "/image/carrusel_proyectos/codigo_barras.webp",
+      demoUrl: "https://cbluna.com/cbl_sistema_pos_demo_web"
+    },
+    {
       titulo: "Gestión de flotas",
       descripcion: "Sistemas modernos para administrar ventas, inventarios y servicios automotrices. Integra cotizaciones en línea, agendamiento de citas de mantenimiento y seguimiento de clientes en un solo lugar para aumentar la eficiencia y las ventas.",
       puntos: [
@@ -198,6 +211,19 @@ export const proyectosTranslations = {
   ],
 
   en: [
+    {
+      titulo: "POS System",
+      descripcion: "Complete and professional point of sale system that integrates barcode scanning, real-time inventory management, digital cash register, and sales reports. Ideal for supermarkets, retail stores, and any business requiring an agile and reliable system.",
+      puntos: [
+        "Fast scanning with laser gun or barcode reader.",
+        "Inventory management with automatic stock updates.",
+        "Digital cash register with multiple payment methods.",
+        "Real-time sales reports and statistics.",
+        "Intuitive and easy-to-use interface for cashiers."
+      ],
+      imagen: "/image/carrusel_proyectos/codigo_barras.webp",
+      demoUrl: "https://cbluna.com/cbl_sistema_pos_demo_web"
+    },
     {
       titulo: "Fleet Management",
       descripcion: "Modern systems to manage sales, inventory, and automotive services. Integrates online quotes, maintenance scheduling, and customer tracking in one place to increase efficiency and sales.",
