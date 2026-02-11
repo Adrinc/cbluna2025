@@ -71,7 +71,8 @@ export const proyectosTranslations = {
         "Control de asistencia y horarios.",
         "Automatización del proceso de reclutamiento."
       ],
-      imagen: "/image/carrusel_proyectos/recursos_humanos.png"
+      imagen: "/image/carrusel_proyectos/recursos_humanos.png",
+      demoUrl: "https://cbluna.com/cbl_rh_demo_web"
     },
     {
       titulo: "Sitios web",
@@ -282,7 +283,8 @@ export const proyectosTranslations = {
         "Attendance and schedule control.",
         "Recruitment process automation."
       ],
-      imagen: "/image/carrusel_proyectos/recursos_humanos.png"
+      imagen: "/image/carrusel_proyectos/recursos_humanos.png",
+      demoUrl: "https://cbluna.com/cbl_rh_demo_web"
     },
     {
       titulo: "Websites",
