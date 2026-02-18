@@ -211,8 +211,8 @@ export const translations = {
         subtitulo: "Gestión profesional de infraestructura de telecomunicaciones."
       },
       uwifi: {
-        titulo: "Gestión de Conectividad",
-        subtitulo: "Administra y optimiza el acceso a internet desde una plataforma centralizada."
+        titulo: "Control Operativo de Redes",
+        subtitulo: "Plataforma integral para ISPs y empresas con operación multi-ubicación."
       },
       ojociudadano: {
         titulo: "Reportes Inteligentes con IA",
@@ -605,8 +605,8 @@ export const translations = {
         subtitulo: "Professional telecommunications infrastructure management."
       },
       uwifi: {
-        titulo: "Connectivity Management",
-        subtitulo: "Manage and optimize internet access from a centralized platform."
+        titulo: "Network Operations Control",
+        subtitulo: "Comprehensive platform for ISPs and enterprises with multi-location operations."
       },
       ojociudadano: {
         titulo: "Intelligent Reports with AI",

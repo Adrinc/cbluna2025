@@ -83,7 +83,8 @@ export const proyectosTranslations = {
         "Optimización SEO para posicionamiento web.",
         "Integración con herramientas y sistemas externos."
       ],
-      imagen: "/image/carrusel_proyectos/diseñosweb.webp"
+      imagen: "/image/carrusel_proyectos/diseñosweb.webp",
+      demoUrl: "https://cbluna.com/cbl_diseno_web_demo"
     },
     {
       titulo: "Gestión de venta",
@@ -184,17 +185,18 @@ export const proyectosTranslations = {
       demoUrl: "https://cbluna.com/cbl_mdf_demo_web"
     },
     {
-      titulo: "Gestión de Conectividad a Internet",
-      descripcion: "Plataforma centralizada para administrar, controlar y optimizar el acceso a internet entre dispositivos, usuarios y ubicaciones. Sistema profesional para ISPs, empresas y redes corporativas que requieren control total sobre la conectividad de su infraestructura.",
+      titulo: "Control Operativo de Redes",
+      descripcion: "Plataforma integral para la administración, monitoreo y optimización de infraestructuras de conectividad multi-ubicación. Diseñada para ISPs, operadores de telecomunicaciones y empresas con despliegue territorial que requieren control operativo, visibilidad en tiempo real y gestión centralizada de dispositivos, suscriptores y políticas de red.",
       puntos: [
-        "Control de acceso por usuario, dispositivo y horario.",
-        "Administración centralizada de módems y routers.",
-        "Orquestación inteligente de ancho de banda.",
-        "Portal de acceso configurable y personalizable.",
-        "Analítica y monitoreo de consumo en tiempo real.",
-        "Escalable para múltiples ubicaciones desde un solo panel."
+        "Centro de control territorial con visualización geográfica.",
+        "Administración avanzada de dispositivos y clientes.",
+        "QoS y control dinámico de ancho de banda.",
+        "Monitoreo y métricas operativas en tiempo real.",
+        "Alertas inteligentes y gestión de incidencias.",
+        "Plataforma escalable para operadores y corporativos."
       ],
-      imagen: "/image/carrusel_proyectos/uwifi.png"
+      imagen: "/image/carrusel_proyectos/uwifi.png",
+      demoUrl: "https://cbluna.com/cbl_gestion_conectividad_demo_web"
     },
     {
       titulo: "Plataforma de Reportes Inteligentes con IA",
@@ -295,7 +297,8 @@ export const proyectosTranslations = {
         "SEO optimization for web positioning.",
         "Integration with external tools and systems."
       ],
-      imagen: "/image/carrusel_proyectos/diseñosweb.webp"
+      imagen: "/image/carrusel_proyectos/diseñosweb.webp",
+      demoUrl: "https://cbluna.com/cbl_diseno_web_demo"
     },
     {
       titulo: "Sales Management",
@@ -396,17 +399,18 @@ export const proyectosTranslations = {
       demoUrl: "https://cbluna.com/cbl_mdf_demo_web"
     },
     {
-      titulo: "Internet Connectivity Management",
-      descripcion: "Centralized platform to manage, control, and optimize internet access across devices, users, and locations. Professional system for ISPs, enterprises, and corporate networks requiring full control over their connectivity infrastructure.",
+      titulo: "Network Operations Control",
+      descripcion: "Comprehensive platform for administration, monitoring, and optimization of multi-location connectivity infrastructure. Designed for ISPs, telecommunications operators, and enterprises with territorial deployment requiring operational control, real-time visibility, and centralized management of devices, subscribers, and network policies.",
       puntos: [
-        "Access control by user, device, and schedule.",
-        "Centralized management of modems and routers.",
-        "Intelligent bandwidth orchestration.",
-        "Configurable and customizable access portal.",
-        "Real-time analytics and consumption monitoring.",
-        "Scalable for multiple locations from a single panel."
+        "Territorial control center with geographic visualization.",
+        "Advanced device and client management.",
+        "QoS and dynamic bandwidth control.",
+        "Real-time operational monitoring and metrics.",
+        "Intelligent alerts and incident management.",
+        "Scalable platform for operators and corporations."
       ],
-      imagen: "/image/carrusel_proyectos/uwifi.png"
+      imagen: "/image/carrusel_proyectos/uwifi.png",
+      demoUrl: "https://cbluna.com/cbl_gestion_conectividad_demo_web"
     },
     {
       titulo: "Intelligent Reports Platform with AI",

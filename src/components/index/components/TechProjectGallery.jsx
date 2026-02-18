@@ -171,7 +171,7 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
     'control_evento': 'control de eventos',
     'dashboards': 'dashboards',
     'mdf_idf': 'mdf / idf',
-    'uwifi': 'gestión de conectividad',
+    'uwifi': 'control operativo',
     'ojociudadano': 'reportes inteligentes'
   };
 
