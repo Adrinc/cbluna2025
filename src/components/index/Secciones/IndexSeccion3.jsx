@@ -22,6 +22,12 @@ const projectsData = [
     technologies: ['💳', '🛒', '📈']
   },
   { 
+    key: 'gestion_venta', 
+    imagen: '/image/carrusel_proyectos/sistema_ventas.png',
+    category: 'web',
+    technologies: ['📋', '💼', '📈']
+  },
+  { 
     key: 'control_evento', 
     imagen: '/image/carrusel_proyectos/control_evento.webp',
     category: 'mobile',

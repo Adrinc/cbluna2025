@@ -166,6 +166,10 @@ export const translations = {
         titulo: "Compras",
         subtitulo: "Optimiza y centraliza tus procesos de adquisición."
       },
+      gestion_venta: {
+        titulo: "Gestión Comercial Empresarial",
+        subtitulo: "ERP de ventas: cotizaciones, facturación y cobranza integradas."
+      },
       control_evento: {
         titulo: "Control de Eventos",
         subtitulo: "Organiza y gestiona tus eventos de principio a fin."
@@ -559,6 +563,10 @@ export const translations = {
       compras: {
         titulo: "Purchases",
         subtitulo: "Optimize and centralize your procurement processes."
+      },
+      gestion_venta: {
+        titulo: "Enterprise Commercial Management",
+        subtitulo: "Sales ERP: quotations, invoicing, and collections integrated."
       },
       control_evento: {
         titulo: "Event Control",

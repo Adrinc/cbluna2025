@@ -87,27 +87,16 @@ export const proyectosTranslations = {
       demoUrl: "https://cbluna.com/cbl_diseno_web_demo"
     },
     {
-      titulo: "Gestión de venta",
-      descripcion: "Ofrecemos soluciones digitales que permiten registrar, rastrear y analizar ventas en tiempo real. Nuestros sistemas están diseñados para maximizar la eficiencia, facilitar la toma de decisiones y conectar todos los procesos comerciales.",
+      titulo: "Gestión Comercial Empresarial",
+      descripcion: "Plataforma integral para administrar el ciclo completo de ventas, desde la cotización hasta la cobranza. Nuestro sistema centraliza órdenes de venta, facturación, cuentas por cobrar e inventario, proporcionando control financiero y trazabilidad total de las operaciones comerciales.",
       puntos: [
-        "Registro de pedidos y seguimiento de ventas.",
-        "Reportes y análisis de desempeño.",
-        "Gestión centralizada de clientes.",
-        "Integración con inventarios y facturación."
+        "Gestión de cotizaciones y órdenes de venta.",
+        "Facturación y control de cuentas por cobrar.",
+        "Integración operativa con inventario y logística.",
+        "Análisis financiero y desempeño comercial."
       ],
-      imagen: "/image/carrusel_proyectos/sistema_ventas.png"
-    },
-    {
-      titulo: "Gestor de Contenido Multimedia",
-      descripcion: "Organiza, edita y distribuye tu contenido de manera eficiente con un sistema avanzado de gestión multimedia. Accede fácilmente a imágenes, videos y documentos para optimizar flujos de trabajo y potenciar tu creatividad.",
-      puntos: [
-        "Almacenamiento y organización centralizada de archivos.",
-        "Edición y administración de imágenes, videos y documentos.",
-        "Búsqueda rápida y categorización inteligente.",
-        "Integración con otras plataformas y herramientas."
-      ],
-      imagen: "/image/carrusel_proyectos/gestion_videos.webp",
-      demoUrl: "https://cbluna.com/cbl_content_manager_demo_web"
+      imagen: "/image/carrusel_proyectos/sistema_ventas.png",
+      demoUrl: "https://cbluna.com/cbl_erp_comercial_demo_web"
     },
     {
       titulo: "Gestión de visitas",
@@ -130,7 +119,8 @@ export const proyectosTranslations = {
         "Control de presupuestos y gastos.",
         "Reportes para análisis de costos."
       ],
-      imagen: "/image/carrusel_proyectos/compras.webp"
+      imagen: "/image/carrusel_proyectos/compras.webp",
+      demoUrl: "https://cbluna.com/cbl_compras_web_demo"
     },
     {
       titulo: "Control de Eventos",
@@ -301,27 +291,16 @@ export const proyectosTranslations = {
       demoUrl: "https://cbluna.com/cbl_diseno_web_demo"
     },
     {
-      titulo: "Sales Management",
-      descripcion: "We offer digital solutions that allow you to record, track, and analyze sales in real-time. Our systems are designed to maximize efficiency, support decision-making, and connect all commercial processes.",
+      titulo: "Enterprise Commercial Management",
+      descripcion: "Comprehensive platform to manage the complete sales cycle, from quotation to collection. Our system centralizes sales orders, invoicing, accounts receivable, and inventory, providing full financial control and traceability of commercial operations.",
       puntos: [
-        "Order registration and tracking.",
-        "Performance reports and analysis.",
-        "Centralized customer management.",
-        "Integration with inventory and billing."
+        "Quotation and sales order management.",
+        "Invoicing and accounts receivable control.",
+        "Operational integration with inventory and logistics.",
+        "Financial analysis and commercial performance."
       ],
-      imagen: "/image/carrusel_proyectos/sistema_ventas.png"
-    },
-    {
-      titulo: "Multimedia Content Manager",
-      descripcion: "Organize, edit, and distribute your content efficiently with an advanced multimedia management system. Easily access images, videos, and documents to optimize workflows and boost creativity.",
-      puntos: [
-        "Centralized file storage and organization.",
-        "Editing and management of images, videos, and documents.",
-        "Fast search and smart categorization.",
-        "Integration with other platforms and tools."
-      ],
-      imagen: "/image/carrusel_proyectos/gestion_videos.webp",
-      demoUrl: "https://cbluna.com/cbl_content_manager_demo_web"
+      imagen: "/image/carrusel_proyectos/sistema_ventas.png",
+      demoUrl: "https://cbluna.com/cbl_erp_comercial_demo_web"
     },
     {
       titulo: "Visitor Management",
@@ -344,7 +323,8 @@ export const proyectosTranslations = {
         "Budget and expense control.",
         "Cost analysis reports."
       ],
-      imagen: "/image/carrusel_proyectos/compras.webp"
+      imagen: "/image/carrusel_proyectos/compras.webp",
+      demoUrl: "https://cbluna.com/cbl_compras_web_demo"
     },
     {
       titulo: "Event Management",

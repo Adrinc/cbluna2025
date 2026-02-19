@@ -163,7 +163,7 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
     'inventario': 'inventarios',
     'recursos_humanos': 'recursos humanos',
     'diseñosweb': 'sitios web',
-    'gestion_venta': 'gestión de venta',
+    'gestion_venta': 'gestión comercial empresarial',
     'gestion_videos': 'gestor de contenido multimedia',
     'content_manager': 'gestor de contenido multimedia',
     'control_visitas': 'gestión de visitas',
