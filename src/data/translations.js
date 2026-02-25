@@ -219,8 +219,8 @@ export const translations = {
         subtitulo: "Plataforma integral para ISPs y empresas con operación multi-ubicación."
       },
       ojociudadano: {
-        titulo: "Reportes Inteligentes con IA",
-        subtitulo: "Convierte imágenes y descripciones en reportes estructurados automáticamente."
+        titulo: "Smart City OPS",
+        subtitulo: "Plataforma operativa urbana con IA para gestionar incidencias con trazabilidad y SLA."
       }
     },
     stats: {
@@ -617,8 +617,8 @@ export const translations = {
         subtitulo: "Comprehensive platform for ISPs and enterprises with multi-location operations."
       },
       ojociudadano: {
-        titulo: "Intelligent Reports with AI",
-        subtitulo: "Transform images and descriptions into structured reports automatically."
+        titulo: "Smart City OPS",
+        subtitulo: "Urban operations platform with AI to manage incidents with traceability and SLA."
       }
     },
     stats: {

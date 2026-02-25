@@ -172,7 +172,7 @@ const TechProjectGallery = ({ projects = defaultProjects, onProjectSelect }) => 
     'dashboards': 'dashboards',
     'mdf_idf': 'mdf / idf',
     'uwifi': 'control operativo',
-    'ojociudadano': 'reportes inteligentes'
+    'ojociudadano': 'smart city operations'
   };
 
   // Agregar información de traducción a cada proyecto

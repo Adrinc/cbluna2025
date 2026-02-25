@@ -189,17 +189,18 @@ export const proyectosTranslations = {
       demoUrl: "https://cbluna.com/cbl_gestion_conectividad_demo_web"
     },
     {
-      titulo: "Plataforma de Reportes Inteligentes con IA",
-      descripcion: "Sistema avanzado que convierte imágenes y descripciones en reportes estructurados, clasificados y priorizados automáticamente mediante inteligencia artificial. Ideal para gobiernos, empresas de servicios, parques industriales y operadores que necesitan gestionar incidentes de manera eficiente.",
+      titulo: "Smart City Operations",
+      descripcion: "Plataforma de operación urbana diseñada para gestionar, priorizar y ejecutar incidencias en entornos gubernamentales y empresariales. Integra inteligencia artificial, jerarquía territorial y motor de reglas configurable para transformar reportes en acciones coordinadas con trazabilidad y cumplimiento de SLA.",
       puntos: [
-        "Análisis de imágenes en tiempo real para identificar elementos clave.",
-        "Interpretación automática de descripciones con procesamiento de lenguaje natural.",
-        "Detección de emoción y asignación de urgencia inteligente.",
-        "Clasificación automática por categorías (tránsito, seguridad, infraestructura).",
-        "Sistema de priorización dinámica según riesgo y evidencia.",
-        "Integrable con CRMs, ERPs y sistemas internos vía API."
+        "Gestión operativa multinivel (Nacional, Estatal, Municipal).",
+        "Motor de priorización configurable según riesgo y contexto.",
+        "Clasificación automática de incidencias con IA asistiva.",
+        "Control de SLA y seguimiento en tiempo real.",
+        "Asignación y coordinación de técnicos y recursos.",
+        "Integración con sistemas internos mediante API."
       ],
-      imagen: "/image/carrusel_proyectos/ojociudadano.png"
+      imagen: "/image/carrusel_proyectos/ojociudadano.png",
+      demoUrl: "https://cbluna.com/cbl_smart_city_ops_demo_web/municipal"
     }
   ],
 
@@ -393,17 +394,18 @@ export const proyectosTranslations = {
       demoUrl: "https://cbluna.com/cbl_gestion_conectividad_demo_web"
     },
     {
-      titulo: "Intelligent Reports Platform with AI",
-      descripcion: "Advanced system that transforms images and descriptions into structured, classified, and prioritized reports automatically using artificial intelligence. Ideal for governments, service companies, industrial parks, and operators needing efficient incident management.",
+      titulo: "Smart City Operations",
+      descripcion: "Urban operations platform designed to manage, prioritize, and execute incidents in governmental and enterprise environments. Integrates artificial intelligence, territorial hierarchy, and a configurable rules engine to transform reports into coordinated actions with full traceability and SLA compliance.",
       puntos: [
-        "Real-time image analysis to identify key elements.",
-        "Automatic description interpretation with natural language processing.",
-        "Emotion detection and intelligent urgency assignment.",
-        "Automatic categorization (traffic, security, infrastructure).",
-        "Dynamic prioritization system based on risk and evidence.",
-        "Integrable with CRMs, ERPs, and internal systems via API."
+        "Multi-level operational management (National, State, Municipal).",
+        "Configurable prioritization engine based on risk and context.",
+        "Automatic incident classification with assistive AI.",
+        "SLA control and real-time tracking.",
+        "Technician and resource assignment and coordination.",
+        "Integration with internal systems via API."
       ],
-      imagen: "/image/carrusel_proyectos/ojociudadano.png"
+      imagen: "/image/carrusel_proyectos/ojociudadano.png",
+      demoUrl: "https://cbluna.com/cbl_smart_city_ops_demo_web/municipal"
     }
   ]
 };
